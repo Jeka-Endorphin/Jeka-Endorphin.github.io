@@ -1,0 +1,37 @@
+html,
+body {
+	height: 100%;
+}
+
+body {
+	/*min-height: 100%;*/
+	background-image: url(../img/bg.jpg);
+	background-repeat: repeat-x;
+	background-color: #0c739f;
+	font: 14px Tahoma, sent-serif;
+}
+
+.wrapper {
+	width: 1000px;
+	min-height: 100%;
+	margin: 0 auto;
+	background-color: #FFF;
+    box-shadow: 0 0 12px #000; 
+    box-shadow: 0 3px 3px #000;
+}
+
+
+
+/*---------------HEADER-------------------*/
+
+/*------------end of HEADER-------------------*/
+
+/*----------------NAV--------------------*/
+
+/*----------------CONTENT---------------*/
+
+
+/*---------------FOTER----------------*/
+footer {
+
+}

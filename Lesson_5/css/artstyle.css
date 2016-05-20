@@ -30,6 +30,10 @@ tr .yellow-square {
     background: #ffe456;
 }
 
+tr .left-white {
+    height: 130px;
+}
+
 tr .bottom-left {
     width: 50px;
     height: 140px;

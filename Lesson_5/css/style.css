@@ -27,8 +27,9 @@ header {
 }
 
 .wrapper {
-	min-height: 1030px;
+	min-height: 1027px;
 	background-image: url('../img/bg2.jpg');
+	box-shadow: 0 3px 3px #151515;
 }
 
 	/*HEADER*/
@@ -62,8 +63,8 @@ header ul {
 }
 
 .vertical-line {
-	height: 31px;
 	width: 5px;
+	height: 31px;
 	margin-top: 2px;
 	border-right: 1px solid #4b9dd6;
 }
@@ -79,12 +80,13 @@ header ul {
 	color: #5fb5ec;
 }
 
+
 	/*WRAPPER*/
 
 .conteiner {
 	width: 560px;
 	height: 615px;
-	margin: 0 auto;
+	margin: auto;
 	padding-top: 213px;
 }
 
@@ -101,6 +103,7 @@ header ul {
 	line-height: 62px;
 }
 
+
 	/*REGISTRATION*/
 
 .registration {
@@ -110,8 +113,8 @@ header ul {
 }
 
 .registration img {
-	padding-top: 36px;
 	margin: 0 auto;
+	padding-top: 36px;
 }
 
 table {
@@ -135,15 +138,16 @@ table {
 	border-top: 1px solid #000;
 }
 
+
 	/*FORM*/
 
 form > * {
 	display: block;
 	width: 277px;
-	height: 36px;
-	margin: 10px auto;
-	color: #cbcbcb;
+	height: 35px;
+	margin: 15px auto;
 	border: 0;
+	color: #cbcbcb;
 }
 
 input {
@@ -152,24 +156,50 @@ input {
 	background: linear-gradient(to bottom, #111 0%, #0e0d0d 100%);
 }
 
+form .active,
+#email:hover,
+#password:hover,
+#email:hover,
+#LastName:hover,
+#password2:hover {
+	width: 277px;
+	height: 35px;
+	border-bottom: 1px solid #699ccd;
+	box-shadow: 2px 2px 6px #699ccd, -2px -2px 6px #699ccd;	
+    background: -moz-radial-gradient(center, ellipse cover, #1d5892 0%, #1A4166 100%); /* ff3.6+ */
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #1d5892), color-stop(100%, #1A4166)); /* safari4+,chrome */
+    background: -webkit-radial-gradient(center, ellipse cover, #1d5892 0%, #1A4166 100%); /* safari5.1+,chrome10+ */
+    background: -o-radial-gradient(center, ellipse cover, #1d5892 0%, #1A4166 100%); /* opera 11.10+ */
+    background: -ms-radial-gradient(center, ellipse cover, #1d5892 0%, #1A4166 100%); /* ie10+ */
+    background: radial-gradient(ellipse at center, #1d5892 0%, #1A4166 100%); /* w3c */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1d5892', endColorstr='#1A4166',GradientType=0 ); /* ie6-9 */
+	color: #fff;
+}
+
 label {
 	display: block;
 	width: 300px;
-	margin: 0 auto;
+	margin: 0 auto -10px;
 	padding: 0;
 	font-size: 14px;
 	text-align: left;
 }
 
 
-[type=submit] {
+
+form [type=submit] {
 	width: 150;
 	height: 34px;
 	margin-bottom: 20px;
 	padding: 0;
-    border-radius: 5px;
 	border: 1px solid #53a0da;
+    border-radius: 5px;
+	background: linear-gradient(#3c8fce 0%, #79d9f9 2%, #50aedb 8%, #3c8fce 50%, #2e72b5 100%);
+}
+
+form [type=submit]:hover {
 	background: linear-gradient(#50aedb 0%, #2e7ac4 100%);
+	font-weight: bold;
 }
 
 p {

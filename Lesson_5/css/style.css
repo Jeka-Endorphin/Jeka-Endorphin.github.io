@@ -101,7 +101,79 @@ header ul {
 	line-height: 62px;
 }
 
+	/*REGISTRATION*/
+
 .registration {
 	height: 550px;
 	margin-top: 2px;
+	color: #cbcbcb;
+}
+
+.registration img {
+	padding-top: 36px;
+	margin: 0 auto;
+}
+
+table {
+	width: 277px;
+	margin: 30px auto;
+	border-collapse: unset;
+}
+
+.OU {
+	width: 30px;
+	color: #999;
+	font-size: 14px;
+	vertical-align: middle;
+}
+
+.bd-top {
+	border-bottom: 1px solid #666;
+}
+
+.bd-bottom {
+	border-top: 1px solid #000;
+}
+
+	/*FORM*/
+
+form > * {
+	display: block;
+	width: 277px;
+	height: 36px;
+	margin: 10px auto;
+	color: #cbcbcb;
+	border: 0;
+}
+
+input {
+	padding-left: 19px;
+	border-bottom: 1px solid #4a4a48;
+	background: linear-gradient(to bottom, #111 0%, #0e0d0d 100%);
+}
+
+label {
+	display: block;
+	width: 300px;
+	margin: 0 auto;
+	padding: 0;
+	font-size: 14px;
+	text-align: left;
+}
+
+
+[type=submit] {
+	width: 150;
+	height: 34px;
+	margin-bottom: 20px;
+	padding: 0;
+    border-radius: 5px;
+	border: 1px solid #53a0da;
+	background: linear-gradient(#50aedb 0%, #2e7ac4 100%);
+}
+
+p {
+	color: #cbcbcb;
+	font-size: 11px;
+	line-height: 15px;
 }

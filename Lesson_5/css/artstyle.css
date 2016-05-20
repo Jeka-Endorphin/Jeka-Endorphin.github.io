@@ -1,0 +1,58 @@
+.wrapper {
+    width: 50%;
+    margin: 0 auto;
+    padding-top: 150px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+td {
+    border: 10px solid #000;
+}
+
+tr .top-right {
+    width: 170px;
+    height: 50px;
+    background: #ffe456;
+}
+
+tr .red {
+    width: 270;
+    height: 270;
+    background: #FF5C2E;
+}
+
+tr .yellow-square {
+    width: 165px;
+    height: 130px;
+    background: #ffe456;
+}
+
+tr .bottom-left {
+    width: 50px;
+    height: 140px;
+    background: #ffe456;
+}
+
+tr .blue {
+    height: 90px;
+    background-color: #084380;
+}
+
+tr .next-white {
+    height: 57px;
+}
+
+tr .black-rectangle {
+    width: 127px;
+    height: 35px;
+    background: #111;
+}
+
+tr .black-square {
+    width: 130px;
+    height: 130px;
+    background: #111;
+}

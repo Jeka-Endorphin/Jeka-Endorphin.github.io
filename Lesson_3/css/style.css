@@ -46,8 +46,6 @@ nav {
 
 nav li {
     display: inline-block;
-    margin-right: 36px;
-    padding: 0 24px;
     border: 1px solid transparent;
     line-height: 40px;
     box-sizing: border-box;
@@ -55,6 +53,7 @@ nav li {
 
 nav li a {
     display: block;
+    padding: 0 40px;
     color: #fff;
     font-size: 15px;
     text-decoration: none;

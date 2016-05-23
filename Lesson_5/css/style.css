@@ -3,8 +3,13 @@ html {
 }
 
 body {
+	height: 100%;
 	background-color: #282828;
 	font-family: 'Helvetica Neue', Tahoma, Arial;
+	background: url('../img/bg.jpg')100% no-repeat;
+	-webkit-background-size: cover;
+	     -o-background-size: cover;
+	        background-size: cover;
 }
 
 a {
@@ -14,7 +19,7 @@ a {
 
 header,
 .wrapper {
-	width: 1215px;
+	width: 100%;
 	margin: 0 auto;
 	color: #fff;
 }
@@ -26,11 +31,6 @@ header {
 	font-size: 14px;
 }
 
-.wrapper {
-	min-height: 1027px;
-	background-image: url('../img/bg2.jpg');
-	box-shadow: 0 3px 3px #151515;
-}
 
 	/*HEADER*/
 
@@ -40,7 +40,7 @@ header ul {
 }
 
 .login,
-.ofers,
+.ofers a,
 .menu li {
 	display: inline-block;
 	padding: 0 14px;
@@ -58,7 +58,11 @@ header ul {
 	text-decoration: underline;	
 }
 
-.ofers-align {
+.login a:hover {
+	text-decoration: none;
+}
+
+.ofers{
 	vertical-align: center;
 }
 
@@ -69,6 +73,7 @@ header ul {
 	border-right: 1px solid #4b9dd6;
 }
 
+
 .menu li:hover,
 .menu a:hover,
 .menu .active {
@@ -76,23 +81,30 @@ header ul {
 	color: #fff;
 }
 
-.menu li a {
+.menu a {
 	color: #5fb5ec;
 }
 
 
 	/*WRAPPER*/
 
+.wrapper {
+	height: 100%;
+	display: table;
+}
+
 .conteiner {
-	width: 560px;
-	height: 615px;
-	margin: auto;
-	padding-top: 213px;
+	display: table-cell;
+	vertical-align: middle;
+	/*padding: auto;*/
 }
 
 .top,
 .registration {
-	width: 100%;
+	/*width: 100%;*/
+	width: 560px;
+	height: 615px;
+	margin: 0 auto;
 	background-color: rgba(0, 0, 0, .63);
 	text-align: center;
 }
@@ -157,11 +169,11 @@ input {
 }
 
 form .active,
-#email:hover,
-#password:hover,
-#email:hover,
-#LastName:hover,
-#password2:hover {
+#email:focus,
+#password:focus,
+#email:focus,
+#LastName:focus,
+#password2:focus {
 	width: 277px;
 	height: 35px;
 	border-bottom: 1px solid #699ccd;
@@ -183,12 +195,11 @@ label {
 	padding: 0;
 	font-size: 14px;
 	text-align: left;
+	cursor: pointer;
 }
 
-
-
 form [type=submit] {
-	width: 150;
+	width: 150px;
 	height: 34px;
 	margin-bottom: 20px;
 	padding: 0;
@@ -200,6 +211,7 @@ form [type=submit] {
 form [type=submit]:hover {
 	background: linear-gradient(#50aedb 0%, #2e7ac4 100%);
 	font-weight: bold;
+	cursor: pointer;
 }
 
 p {

@@ -1,0 +1,48 @@
+/* font-family: Lucida sans Unicode */
+@font-face {
+    font-family: 'Lucida Sans Unicode';
+    src: url('../fonts/lsansuni-webfont.woff2') format('woff2'),
+         url('../fonts/lsansuni-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* font-family: "ArialRegular"; */
+@font-face {
+    font-family: 'Arial';
+    src: url('../fonts/arialregular-webfont.woff2') format('woff2'),
+         url('../fonts/arialregular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* font-family: "ArialBold"; */
+@font-face {
+    font-family: 'Arial';
+    src: url('../fonts/arialbold-webfont.woff2') format('woff2'),
+         url('../fonts/arialbold-webfont.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+
+/* font-family: "ArialItalic"; */
+@font-face {
+    font-family: 'Arial';
+    src: url('../fonts/arialitalic-webfont.woff2') format('woff2'),
+         url('../fonts/arialitalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+
+/* font-family: "ArialBoldItalic"; */
+@font-face {
+    font-family: 'Arial';
+    src: url('../fonts/arialbolditalic-webfont.woff2') format('woff2'),
+         url('../fonts/arialbolditalic-webfont.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+}

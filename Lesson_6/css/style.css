@@ -1,0 +1,309 @@
+html,
+body {
+    height: 100%;
+    background-color: yellow;
+}
+
+.wrapper {
+    min-height: 100%;
+    width: 1000px;    
+    margin: 0 auto;
+
+    background-color: #fff;
+}
+
+.clearfix::after {
+    content: '';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+        /*HEADER*/
+
+header {
+    padding: 18px 51px 0;
+}
+
+.phone_num::before {
+    content: '';
+    display: inline-block;
+    position: relative;
+    top: 4px;
+    height: 21px;
+    width: 21px;
+    padding-right: 4px;
+    background-image: url(../img/sprite.png);
+}
+
+.phone {
+    float: left;
+}
+
+.phone_num {
+    color: #5e686c;
+    font-family: "Arial";
+    font-size: 19px;
+    letter-spacing: -.2px;     
+
+}
+
+
+.autorization {
+    position: relative;
+    float: left;
+    width: 495px;
+    height: 26px;
+    margin-left: 15px;
+    -moz-border-radius: 4px / 3px;
+    -webkit-border-radius: 4px / 3px;
+    border-radius: 4px / 3px;
+    background-color: #b1bbbf;
+    -moz-box-shadow: 2px 3px 3px rgba(150,150,150,.75);
+    -webkit-box-shadow: 2px 3px 3px rgba(150,150,150,.75);
+    box-shadow: 2px 3px 3px rgba(150,150,150,.75);
+    background-image: -moz-linear-gradient(top, #1f6987 0%, #114165 59.23%, #0b3155 100%);
+    background-image: -o-linear-gradient(top, #1f6987 0%, #114165 59.23%, #0b3155 100%);
+    background-image: -webkit-linear-gradient(top, #1f6987 0%, #114165 59.23%, #0b3155 100%);
+    background-image: linear-gradient(top, #1f6987 0%, #114165 59.23%, #0b3155 100%);
+    font-family: "Lucida Sans Unicode", sans-serif;
+    font-size: 12px;
+}
+
+form::before {
+    content: '';
+    display: inline-block;
+    position: relative;
+    top: 3px;
+    width: 15px;
+    height: 20px;
+    margin: 0 4px 0 6px;
+    background-image: url(../img/sprite.png);
+    background-position: -21px 2px;
+}
+
+form {
+    float: left;
+    margin-top: -1px;
+}
+
+input {
+    position: relative;
+    width: 107px;
+    top: -3px;
+    padding-left: 3px;
+    font-size: 11px;
+    margin-right: 3px;
+    height: 11px;
+    color: #97a1a5;
+    font-family: "Lucida Sans Unicode", sans-serif;
+    line-height: 13px;
+}
+
+
+.enter a {
+    float: left;
+    color: #fff;
+    font-family: "Lucida Sans Unicode", sans-serif;
+    font-size: 11px;
+    line-height: 24px;
+    padding: 0 5px 0 4px;
+    text-decoration: none;
+    text-shadow: 0 0 1px #fff;
+}
+
+.enter a:hover {
+    text-decoration:underline;
+} 
+
+.forget_pass a {
+    float: right;
+    height: 19px;
+    display: block;
+    margin-right: 10px;
+    border-bottom: 1px solid #bfbfbf;
+    color: #bfbfbf;
+    font-family: "Lucida Sans Unicode", sans-serif;
+    font-size: 11px;
+    letter-spacing: .6px;
+    line-height: 23px;
+    text-shadow: 0 0 1px #bfbfbf;
+    text-decoration: none;
+}
+
+.forget_pass a:hover {
+    border: none;
+}
+
+form + span::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 8px;
+    left: 298px;
+    width: 1px;
+    height: 10px;
+    background-color: #fff;
+}
+
+.navi {
+    float: left;
+    width: 75px;
+    height: 19px;
+    margin: 1px 0 0 17px;
+    border: 1px solid #bdc3c7;
+    -moz-border-radius: 11px;
+    -webkit-border-radius: 11px;
+    border-radius: 11px;
+    background-color: #fff;
+    box-shadow: 0 1px 4px #bdc3c7;
+}
+
+.home a {
+    float: left;
+    width: 11px;
+    height: 11px;
+    background-image: url('../img/sprite.png');
+    background-position: -37px 0px;
+    margin: 2px 0 0 9px;
+}
+
+.map a {
+    float: left;
+    width: 14px;
+    height: 10px;
+    background-image: url('../img/sprite.png');
+    background-position: -50px 0px;
+    margin: 3px 0 0 8px;
+}
+.mail a {
+    float: left;
+    width: 11px;
+    height: 8px;
+    background-image: url('../img/sprite.png');
+    background-position: -67px 0px;
+    margin: 5px 0 0 10px;
+}
+
+.home a:hover {
+    background-image: url('../img/sprite.png');
+    background-position: -37px -13px;
+} 
+
+.map a:hover {
+    background-image: url('../img/sprite.png');
+    background-position: -50px -11px;
+}
+
+.mail a:hover {
+    background-image: url('../img/sprite.png');
+    background-position: -67px -11px;
+}
+
+header img {
+    margin: 11px 0 0 -6px;
+}
+
+        /*MENU*/
+
+.menu {
+    width: 909px;
+    height: 32px;
+    margin: 1px auto;
+    border: 1px solid #0c1542;
+    -moz-border-radius: 6px / 4px;
+    -webkit-border-radius: 6px / 4px;
+    border-radius: 6px / 4px;
+    background-color: #fff;
+    -moz-box-shadow: 2px 3px 5px rgba(0,0,0,.6);
+    -webkit-box-shadow: 2px 3px 5px rgba(0,0,0,.6);
+    box-shadow: 2px 3px 5px rgba(0,0,0,.6);
+    background-image: -moz-linear-gradient(bottom, #000 0%, #1C1F22 60%, #202326 80%, #565f68 100%);
+    background-image: -o-linear-gradient(bottom, #000 0%, #1C1F22 60%, #202326 80%, #565f68 100%);
+    background-image: -webkit-linear-gradient(bottom, #000 0%, #1C1F22 60%, #202326 80%, #565f68 100%);    
+    background-image: linear-gradient(bottom, #000 0%, #1C1F22 60%, #202326 80%, #565f68 100%);
+}
+
+.main_menu::before {
+    content: " ";
+    height: 1px;
+    display: block;
+    padding-left: 125px;
+    float: left;
+}
+
+.main_menu li {
+    display: block;
+    float: left;
+}
+
+.main_menu li a {
+    padding: 2px 20px;
+    color: #b1bcc0;
+    font-family: "Lucida Sans Unicode", sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-decoration: none;
+    line-height: 32px;
+    letter-spacing: -.2px;
+}
+
+.main_menu .payment a {
+    padding: 0 15px;
+}
+
+.main_menu .delivery a {
+    padding: 0 13px;
+}
+
+.main_menu .artic a {
+    padding: 0 12px 0 16px;
+}
+
+.main_menu .cont a {
+    padding: 0 14px;
+}
+
+.main_menu li a:hover,
+.main_menu .active a {
+    -moz-border-radius: 13px;
+    -webkit-border-radius: 13px;
+    border-radius: 13px;
+    background-image: -moz-linear-gradient(top, #1f6987 0%, #114165 59.23%, #0b3155 100%);
+    background-image: -o-linear-gradient(top, #1f6987 0%, #114165 59.23%, #0b3155 100%);
+    background-image: -webkit-linear-gradient(top, #1f6987 0%, #114165 59.23%, #0b3155 100%);
+    background-image: linear-gradient(top, #1f6987 0%, #114165 59.23%, #0b3155 100%);
+    color: #fff;
+}
+
+.basket {
+    float: right;
+    margin: 9px 11px 0 0;
+    color: #929b9f;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    letter-spacing: .2px;
+}
+
+.busket_num {
+    color: #0d5a8f;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.busket_sum {
+    padding: 0 6px 0 12px;
+}
+
+.basket::before {
+    content: '';
+    display: block;
+    top: 4px;
+    width: 21px;
+    height: 16px;
+    margin: -2px 8px;
+    float: left;
+    background-image: url(../img/sprite.png);
+    background-position: -79px 0;
+}

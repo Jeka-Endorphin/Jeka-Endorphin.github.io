@@ -125,7 +125,7 @@ header {
     font-family: "Lucida Sans Unicode", sans-serif;
     font-size: 11px;
     letter-spacing: .6px;
-    line-height: 23px;
+    line-height: 25px;
     text-shadow: 0 0 1px #bfbfbf;
     text-decoration: none;
 }
@@ -417,7 +417,7 @@ main h2::before {
 .center-column {
     width: 526px;
     height: 627px;
-    margin: 163px 0 0 0;
+    margin: 161px 0 0 -1px;
     float: left;
     border-radius: 3px;
     -moz-background-clip: padding;
@@ -433,12 +433,16 @@ main h2::before {
 
 .tovar {
     width: 140px;
-    height: 191px;
-    margin: 13px 5px 0 22px;
+    height: 186px;
+    margin: 16px 6px 0 22px;
     float: left;
     font-family: "Lucida Sans Unicode", sans-serif;
     font-size: 12px;
-    text-align: center; 
+    text-align: center;
+}
+
+.bottom .tovar_img {
+    margin-top: 2px;    
 }
 
 .tovar h3 {
@@ -532,7 +536,7 @@ input[type="submit"] {
     /*ASIDE*/
 
 aside {
-    height: 80px;
+    height: 82px;
     display: flex;
 }
 
@@ -541,7 +545,7 @@ aside {
     width: 356px;
     background-image: url(../img/sprite.png);
     background-position: -145px 0;
-    margin: 39px 0 0 161px;
+    margin: 41px 0 0 161px;
 }
 
 .advert2 {
@@ -549,7 +553,7 @@ aside {
     width: 313px;
     background-image: url(../img/sprite.png);
     background-position: -507px 0px;
-    margin: 36px 0 0 9px;
+    margin: 38px 0 0 9px;
 }
 
     /*FOOTER*/

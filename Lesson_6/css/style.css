@@ -1,11 +1,11 @@
 html,
 body {
     height: 100%;
-    /*background-color: yellow;*/
 }
 
 .wrapper {
     height: 100%;
+    min-height: 100%;
     width: 1000px;    
     margin: 0 auto;
 
@@ -344,7 +344,7 @@ main h1
 {
     width: 180px;
     height: 25px;
-    margin: 165px 0 12px 43px;
+    margin: 164px 0 12px 43px;
     border: 1px solid #79878d;
     border-radius: 13px;
     -moz-border-radius: 13px;
@@ -355,7 +355,8 @@ main h1
     color: #114165;
     font-family: "Lucida Sans Unicode", sans-serif;
     font-size: 13px;
-    line-height: 27px;
+    line-height: 23px;
+    letter-spacing: -.3px;
 }
 
 .left-sidebar section {
@@ -418,7 +419,6 @@ main h2::before {
     height: 627px;
     margin: 163px 0 0 0;
     float: left;
-    /*border: 1px solid #797878;*/
     border-radius: 3px;
     -moz-background-clip: padding;
     -moz-border-radius: 3px;
@@ -473,7 +473,7 @@ main h2::before {
 }
 
 
-/* right-sidebar */
+/* RIGHT SIDEBAR */
 
 .right-sidebar {
     float: right;
@@ -521,7 +521,80 @@ input[type="submit"] {
     background-image: linear-gradient(top, #1f6987 0%, #114165 59.23%, #0b3155 100%);
     color: #e5e9e9;
     font-family: Arial, Tahoma, "Lucida Sans Unicode", sans-serif;
-    font-size: 11px;
+    font-size: 12px;
     line-height: 19px;
+    box-shadow: 1px 2px 4px #a7abad;
+} /*end of RIGHT SIDEBAR */
+  
+   /*end of MAIN */
+
+
+    /*ASIDE*/
+
+aside {
+    height: 80px;
+    display: flex;
 }
+
+.advert1 {
+    height: 27px;
+    width: 356px;
+    background-image: url(../img/sprite.png);
+    background-position: -145px 0;
+    margin: 39px 0 0 161px;
+}
+
+.advert2 {
+    height: 27px;
+    width: 313px;
+    background-image: url(../img/sprite.png);
+    background-position: -507px 0px;
+    margin: 36px 0 0 9px;
+}
+
+    /*FOOTER*/
+
+footer {
+    width: 910px;
+    height: 100px;
+    margin: 8px 44px 0;
+    background: #213A4D;
+    text-align: center;
+}
+
+.nav-bottom {
+    padding-top: 12px;
+    font-size: 0;
+}
+
+.nav-bottom li {
+    display: inline-block;
+    
+}
+
+.nav-bottom a {
+    padding: 0 13px 0 14px;
+    color: #BEC6C9;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.nav-bottom a:hover,
+.nav-bottom .active a {
+    color: #52ABCB;
+}
+
+.nav-bottom li + li {
+    border-left: 1px solid #fff;
+}
+
+
+footer p {
+    margin-left: -1px;
+    padding-top: 14px;
+    color: #7F4740;
+    font: 10px arial;
+}
+
 

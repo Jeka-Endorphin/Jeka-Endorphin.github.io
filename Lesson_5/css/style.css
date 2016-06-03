@@ -4,12 +4,6 @@ html {
 
 body {
     height: 100%;
-    background: url('../img/bg.jpg') 100% no-repeat;
-    background-color: #282828;
-    -webkit-background-size: cover;
-         -o-background-size: cover;
-            background-size: cover;
-    font-family: 'Helvetica Neue', Tahoma, Arial;
 }
 
 a {
@@ -17,38 +11,28 @@ a {
     text-decoration: none;
 }
 
-header,
-.wrapper {
-    width: 100%;
-    margin: 0 auto;
-    color: #fff;
-}
+    /*HEADER*/
 
 header {
+    width: 100%;
+    margin: 0 auto;
     height: 36px;
     background-image: url('../img/pattern-header.jpg');
     background-repeat: repeat-x;
+    color: #fff;
+    font-family: 'Helvetica Neue', Tahoma, Arial;
     font-size: 14px;
 }
-
-
-    /*HEADER*/
 
 header div,
 header ul {
     float: right;
 }
 
-.login,
-.ofers a,
-.menu li {
-    display: inline-block;
-    padding: 0 14px;
-    line-height: 36px;
-}
-
 .login {
+    display: inline-block;
     margin-right: 20px;
+    padding: 0 14px;
     border: 1px solid #4b9dd6;
     border-top: 0;
     background: linear-gradient(to top, #2e7ac4, #51b1dc);
@@ -63,17 +47,31 @@ header ul {
     text-decoration: none;
 }
 
-.ofers {
-    vertical-align: center;
+.ofers img {
+    vertical-align: middle;
+    padding-left: 12px;
+}
+
+.ofers span {
+    display: inline-block;
+    padding: 0 16px 0 3px;
+    line-height: 36px;
 }
 
 .vertical-line {
-    width: 5px;
+    width: 0;
     height: 31px;
     margin-top: 2px;
     border-right: 1px solid #4b9dd6;
 }
 
+.menu {
+    font-size: 0;
+}
+
+.menu li {
+    display: inline-block;
+}
 
 .menu li:hover,
 .menu a:hover,
@@ -83,15 +81,27 @@ header ul {
 }
 
 .menu a {
+     display: inline-block;
+    padding: 0 14px;
+     font-size: 14px;
+    line-height: 36px;
     color: #5fb5ec;
 }
 
+/*end of HEADER*/
 
     /*WRAPPER*/
 
 .wrapper {
+    width: 100%;
+    max-width: 100%;
     display: table;
-    height: 100%;
+    height: 96.7%;
+    background: url('../img/bg.jpg') 100% no-repeat;
+    -webkit-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover;
+    font-family: 'Helvetica Neue', Tahoma, Arial;
 }
 
 .conteiner {
@@ -99,8 +109,8 @@ header ul {
     vertical-align: middle;
 }
 
-.top,
-.registration {
+.conteiner__top,
+.conteiner__registration {
     width: 560px;
     height: 615px;
     margin: 0 auto;
@@ -108,8 +118,9 @@ header ul {
     text-align: center;
 }
 
-.top {
+.conteiner__top {
     height: 62px;
+    color: #fff;
     font-size: 24px;
     line-height: 62px;
 }
@@ -117,38 +128,49 @@ header ul {
 
     /*REGISTRATION*/
 
-.registration {
+.conteiner__registration {
     height: 550px;
     margin-top: 2px;
     color: #cbcbcb;
 }
 
-.registration img {
+.conteiner__registration img {
     margin: 0 auto;
     padding-top: 36px;
 }
 
-table {
-    width: 277px;
-    margin: 30px auto;
-    border-collapse: unset;
-}
-
-.OU {
-    width: 30px;
+.conteiner__line{
+    display: inline-block;
+    position: relative;
+    width: 20px;
+    height: 30px;
+    margin: 13px 0;
     color: #999;
     font-size: 14px;
-    vertical-align: middle;
 }
 
-.bd-top {
-    border-bottom: 1px solid #666;
+
+.conteiner__line::before {
+    content: '';
+    display: inline-block;
+    position: relative;
+    width: 123px;
+    top: 12px;
+    left: -128px;
+    border-top: 1px solid #666;
+    border-bottom: 1px solid #000;
 }
 
-.bd-bottom {
-    border-top: 1px solid #000;
+.conteiner__line::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    width: 123px;
+    top: 21px;
+    left: 26px;
+    border-top: 1px solid #666;
+    border-bottom: 1px solid #000;
 }
-
 
     /*FORM*/
 
@@ -162,17 +184,17 @@ form > * {
 }
 
 input {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
     padding-left: 19px;
+    margin-bottom: 17px;
     border-bottom: 1px solid #4a4a48;
     background: linear-gradient(to bottom, #111 0%, #0e0d0d 100%);
 }
 
 form .active,
-#email:focus,
-#password:focus,
-#email:focus,
-#LastName:focus,
-#password2:focus {
+form input:not(#updates):focus{
     width: 277px;
     height: 35px;
     border-bottom: 1px solid #699ccd;
@@ -189,7 +211,6 @@ form .active,
 
 label {
     display: block;
-    width: 300px;
     margin: 0 auto -10px;
     padding: 0;
     font-size: 14px;

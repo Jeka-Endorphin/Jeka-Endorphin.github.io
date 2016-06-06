@@ -7,7 +7,7 @@ body {
     background-color: #0c739f;
     background-image: url('../img/bg.jpg');
     background-repeat: repeat-x;
-    font: 14px Tahoma, sent-serif;
+    font: 14px Tahoma, sans-serif;
 }
 
 .wrapper {
@@ -18,22 +18,22 @@ body {
     box-shadow: 0 0 12px #000, 0 3px #000;
 }
 
-
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
 
 /*---------------HEADER-------------------*/
 header {
-    position: relative;
     height: 213px;
     border-bottom: 1px solid #128aa7;
 }
 
 .logo {
-    position: absolute;
-    bottom: 0;
-}
-
-.logo img {
+    margin-top: 38px;
     float: left;
+    font-size: 0;
 }
 
 .contacts {
@@ -101,13 +101,6 @@ header {
     box-shadow: 0 3px 9px #121212;
 }
 
-.menu::after {
-    content: ' ';
-    display: block;
-    float: none;
-    clear: both;
-}
-
 .menu > li {
     position: relative;
     float: left;
@@ -134,7 +127,7 @@ header {
     right: 42px;
     width: 0;
     height: 0;
-    border-width: 6px 2.5px;
+    border-width: 6px 3px;
     border-style: solid;
     border-color: #fff transparent transparent;
 }
@@ -165,7 +158,6 @@ header {
 
 .submenu > li:hover {
     background: #353535;
-    text-decoration: underline;
 }
 
 .submenu > li > a {

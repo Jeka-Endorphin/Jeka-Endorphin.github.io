@@ -1,0 +1,64 @@
+html,
+body {
+    height: 100%;
+}
+
+
+
+.clearfix::after {
+    content: '';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+@media only screen and (min-width: 960px) {
+
+.wrapper-top {
+    width: 100%;
+    height: 846px;
+    background-image: url(../img/bg-top.jpg);   
+}
+        /*HEADER*/
+
+.header {
+    
+}
+
+.header__logo {
+    
+}
+
+.menu__list {
+    font-family: LeagueGothic ; /*добавить шрифт REGULAR*/
+}
+
+
+
+
+.slider {
+    width: 2400px;
+    height: 400px;
+    opacity: .2;
+    background-color: #000;
+}
+
+.slider__content {
+    
+}
+
+.slider__content h1 {
+    
+}
+
+.slider__content h2 {
+    
+}
+
+
+.slider__picture {
+    
+}
+
+} /*@media only screen and (min-width: 960px)*/

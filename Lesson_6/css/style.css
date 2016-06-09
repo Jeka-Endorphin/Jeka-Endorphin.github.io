@@ -315,6 +315,9 @@ header img {
 
 /* end MENU*/
 
+.picture-forms {
+    margin: 7px 0 0 43px;    
+}
 
     /*MAIN*/
 main   {
@@ -344,7 +347,7 @@ main h1
 {
     width: 180px;
     height: 25px;
-    margin: 164px 0 12px 43px;
+    margin: 7px 0 12px 43px;
     border: 1px solid #79878d;
     border-radius: 13px;
     -moz-border-radius: 13px;
@@ -417,7 +420,7 @@ main h2::before {
 .center-column {
     width: 526px;
     height: 627px;
-    margin: 161px 0 0 -1px;
+    margin: 3px 0 0 -1px;
     float: left;
     border-radius: 3px;
     -moz-background-clip: padding;
@@ -485,7 +488,7 @@ main h2::before {
 }
 
 .right-sidebar h1 {
-    margin: 163px 0 0 7px;
+    margin: 4px 0 0 7px;
 }
 
 .right-sidebar form {

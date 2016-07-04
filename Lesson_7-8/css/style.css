@@ -8,49 +8,6 @@ body {
     background-position-x: center;
 }
 
-/*BREAKPOINT SCREEN*/
-body::after {
-    background: red;
-    color: #fff;
-    content: "undefined";
-    right: 0;
-    opacity: 0.8;
-    padding: 0.5em 1em;
-    position: fixed;
-    text-align: center;
-    bottom: 0;
-    z-index: 99;
-}
-
-@media only screen and (max-width: 479px) {
-    body::after {
-        background: orange;
-        content: "mobile";
-    }
-}
-
-@media only screen and (min-width: 480px) and (max-width: 767px) {
-    body::after {
-        background: red;
-        content: "tablet-mini";
-    }
-}
-
- @media only screen and (min-width: 768px) and (max-width: 959px) {
-    body::after {
-        background: violet;
-        content: "tablet";
-    }
-}
-
-@media only screen and (min-width: 960px) {
-    body::after {
-        background: green;
-        content: "desktop";
-    }
-} /* ------- BREAKPOINT SCREEN -------- */
-
-
 .clearfix::after {
     content: '';
     clear: both;
@@ -63,7 +20,6 @@ body::after {
     width: 100%;
     height: 846px;
 }
-
         
 /* -------------- HEADER ------------ */
 
@@ -1178,3 +1134,47 @@ footer {
     }
 
 } /*end of @media only screen and (max-width: 479px)*/ 
+
+
+/*BREAKPOINT SCREEN*/
+/*body::after {
+    background: red;
+    color: #fff;
+    content: "undefined";
+    right: 0;
+    opacity: 0.8;
+    padding: 0.5em 1em;
+    position: fixed;
+    text-align: center;
+    bottom: 0;
+    z-index: 99;
+}*/
+
+/*@media only screen and (max-width: 479px) {
+    body::after {
+        background: orange;
+        content: "mobile";
+    }
+}*/
+
+/*@media only screen and (min-width: 480px) and (max-width: 767px) {
+    body::after {
+        background: red;
+        content: "tablet-mini";
+    }
+}*/
+
+/* @media only screen and (min-width: 768px) and (max-width: 959px) {
+    body::after {
+        background: violet;
+        content: "tablet";
+    }
+}
+*/
+/*@media only screen and (min-width: 960px) {
+    body::after {
+        background: green;
+        content: "desktop";
+    }
+}*/ 
+/* ------- BREAKPOINT SCREEN -------- */

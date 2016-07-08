@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>lection-example</title>
+   <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<script>
+      var newDom = {
+         title: 'Тест по програмированию',
+         qwestions: ['Вопрос №1', 'Вопрос №2', 'Вопрос №3', 'Вопрос №4'],
+         answers: [ ['Вариант ответа №1', 'Вариант ответа №2', 'Вариант ответа №3'], ['Вариант ответа №1', 'Вариант ответа №2', 'Вариант ответа №3', 'Вариант ответа №4', 'Вариант ответа №5'], ['Вариант ответа №1', 'Вариант ответа №2', 'Вариант ответа №9'], ['Вариант ответа №7', 'Вариант ответа №8'] ],
+         parentElem: document.body,
+         elem: null,
+         genTitle: function (tag, title) {
+           this.elem = document.createElement(tag);
+           this.elem.innerHTML =  title;
+           document.body.appendChild(this.elem);
+         },
+         genForm: function (argument) {
+            var form, ol, q, p, h, a, li, answ, div, chx; 
+            form = document.createElement('form');
+            document.body.appendChild(form);
+            ol = document.createElement('ol');
+            form.appendChild(ol);
+            q = this.qwestions.length;
+            for (var i = 0; i < q; i++) {
+               li = document.createElement('li');
+               ol.appendChild(li);
+               h = document.createElement('h4');
+               h.innerHTML = this.qwestions[i];
+               li.appendChild(h);
+               a = this.answers[i].length;
+               console.log('длина [i]:', i, a);
+               for (var j = 0; j < a; j++) {
+                  div = document.createElement('div');
+                  li.appendChild(div);
+                  answ = document.createElement('input');
+                  answ.setAttribute('type', 'checkbox');
+                  answ.setAttribute('name', 'k'+i+j);
+                  answ.setAttribute('id', 'k'+i+j);
+                  div.appendChild(answ);
+                  answ = document.createElement('label');
+                  answ.setAttribute('for', 'k'+i+j);
+                  answ.innerHTML = this.answers[i][j];
+                  div.appendChild(answ);          
+               }// for 2
+            }// for1 
+            this.elem = document.createElement('input');
+            this.elem.setAttribute('type', 'submit');
+            this.elem.setAttribute('value', 'Проверить мои результаты');
+            this.elem.setAttribute('id', 'submit');
+            document.querySelector('form').appendChild(this.elem);
+         },
+         genBase: function () {
+            this.genTitle('h2', this.title);
+            this.genForm();
+        }
+      };
+
+      newDom.genBase();
+
+   </script>
+
+</body>
+</html>

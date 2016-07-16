@@ -1,0 +1,42 @@
+.wrapper {
+	margin: 100px auto;
+	text-align: center;
+}
+
+.time {
+	width: 200px;
+	margin: auto;
+}
+.task1 {
+	padding-left: 35px;
+}
+
+.timebox {
+	text-align: left;
+}
+ol {
+	width: 150px;
+    display: flex;
+    margin: 20px auto;
+    flex-direction: column;
+}
+
+span {
+	font-size: 80%;
+}
+
+.pure-button {
+	color: #fff;
+}
+
+.button-secondary {
+    background: rgb(66, 184, 221); 
+}
+
+.button-success {
+    background: rgb(28, 184, 65); 
+}
+
+.button-split {
+	background: rgb(223, 117, 20); 
+}

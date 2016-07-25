@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Homework 9-10</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.0.js"></script>
+
+	<script src="js/jquery.jcarousel.js"></script>
+</head>
+<body>
+	<div class="wrap_jcarousel">
+		<div class="jcarousel">
+			<ul>
+				<li><img src="img/c-1.jpg" alt=""></li>
+				<li><img src="img/c-2.jpg" alt=""></li>
+				<li><img src="img/c-3.jpg" alt=""></li>
+				<li><img src="img/c-4.jpg" alt=""></li>
+				<li><img src="img/c-5.jpg" alt=""></li>
+			</ul>
+		</div>
+
+			<a href="#" class="jcarousel-prev">‹Prev</a>
+			<a href="#" class="jcarousel-next">Next›</a>
+	</div>
+	<script>
+		$(function() {
+			$('.jcarousel').jcarousel({
+					list: '.jcarousel-list'
+			});
+				
+			// $('.jcarousel').jcarouselAutoscroll({
+	  //           interval: 3000,
+	  //           target: '+=1',
+	  //           autostart: true
+   //      	});
+				 // Инициализация прокрутки слайдера
+			$('.jcarousel-prev').jcarouselControl({ target: '-=1' });
+			$('.jcarousel-next').jcarouselControl({ target: '+=1' });
+		})
+	</script>
+</body>
+</html>

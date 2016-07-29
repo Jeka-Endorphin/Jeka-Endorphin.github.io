@@ -4,40 +4,161 @@
 	<meta charset="UTF-8">
 	<title>Homework 9-10</title>
 	<link rel="stylesheet" href="css/style.css">
-	<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.0.js"></script>
-
-	<script src="js/jquery.jcarousel.js"></script>
+	<link rel="stylesheet" href="css/jcarousel.responsive.css">
+	<link href="css/select2.css" rel="stylesheet" />
 </head>
 <body>
-	<div class="wrap_jcarousel">
-		<div class="jcarousel">
-			<ul>
-				<li><img src="img/c-1.jpg" alt=""></li>
-				<li><img src="img/c-2.jpg" alt=""></li>
-				<li><img src="img/c-3.jpg" alt=""></li>
-				<li><img src="img/c-4.jpg" alt=""></li>
-				<li><img src="img/c-5.jpg" alt=""></li>
-			</ul>
+	<!-- navigation	 -->
+	<nav>
+		<ul>
+			<li><a href="#">Nav 1</a></li>
+			<li><a href="#">Nav 2</a></li>
+			<li class="dropdown">
+				<a href="#">Nav 3</a>
+				<ul class="sub-menu">
+					<li><a href="#">Nav 3.1</a></li>
+					<li><a href="#">Nav 3.2</a></li>
+					<li><a href="#">Nav 3.3</a></li>
+					<li class="dropdown">
+						<a href="#">Nav 3.4</a>
+						<ul class="sub-menu">
+							<li><a href="#">Nav 3.4.1</a></li>
+							<li class="dropdown">
+								<a href="#">Nav 3.4.2</a>
+								<ul class="sub-menu">
+									<li><a href="#">Nav 3.4.2.1</a></li>
+								</ul>
+							</li>
+							<li><a href="#">Nav 3.4.3</a></li>
+							<li><a href="#">Nav 3.4.4</a></li>
+							<li><a href="#">Nav 3.4.5</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Nav 3.5</a></li>
+				</ul>
+			</li>
+			<li><a href="#">Nav 4</a></li>
+			<li class="dropdown">
+				<a href="#">Nav 5</a>
+				<ul class="sub-menu">
+					<li><a href="#">Nav 5.1</a></li>
+					<li class="dropdown">
+						<a href="#">Nav 5.2</a>
+						<ul class="sub-menu">
+							<li><a href="#">Nav 5.2.1</a></li>
+							<li class="dropdown">
+								<a href="#">Nav 5.2.2</a>
+								<ul class="sub-menu">
+									<li><a href="#">Nav 5.2.2.1</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li><a href="#">Nav 5.3</a></li>
+				</ul>
+			</li>
+			<li><a href="#">Nav 6</a></li>
+		</ul>
+	</nav>
+
+	<!-- jcarousel -->
+	<section>
+		<h1>Responsive Carousel-Autoscroll</h1>
+		<p></p>
+
+		<div class="wrap_jcarousel">
+			<div class="jcarousel">
+				<ul class="jcarousel-list">
+					<li><img src="img/img1.jpg" alt=""></li>
+					<li><img src="img/img2.jpg" alt=""></li>
+					<li><img src="img/img3.jpg" alt=""></li>
+					<li><img src="img/img4.jpg" alt=""></li>
+					<li><img src="img/img5.jpg" alt=""></li>
+				</ul>
+			</div>
+
+			<a href="#" class="jcarousel-prev">‹</a>
+			<a href="#" class="jcarousel-next">›</a>
+			
+			<div class="jcarousel-pagination"></div>
 		</div>
 
-			<a href="#" class="jcarousel-prev">‹Prev</a>
-			<a href="#" class="jcarousel-next">Next›</a>
-	</div>
-	<script>
-		$(function() {
-			$('.jcarousel').jcarousel({
-					list: '.jcarousel-list'
-			});
-				
-			// $('.jcarousel').jcarouselAutoscroll({
-	  //           interval: 3000,
-	  //           target: '+=1',
-	  //           autostart: true
-   //      	});
-				 // Инициализация прокрутки слайдера
-			$('.jcarousel-prev').jcarouselControl({ target: '-=1' });
-			$('.jcarousel-next').jcarouselControl({ target: '+=1' });
-		})
-	</script>
+
+		<!-- select2 -->
+		<div>
+			<h1>Custom select</h1>
+			<label for="id_label_multiple">Your preferred programming language: 
+				<select class="selectbox" id="id_label_multiple" multiple="multiple">
+					<option value="">Select one...</option>
+					<option value="ActionScript">ActionScript</option>
+					<option value="AppleScript">AppleScript</option>
+					<option value="Asp">Asp</option>
+					<option value="BASIC">BASIC</option>
+					<option value="C">C</option>
+					<option value="C++">C++</option>
+					<option value="Clojure">Clojure</option>
+					<option value="COBOL">COBOL</option>
+					<option value="ColdFusion">ColdFusion</option>
+					<option value="Erlang">Erlang</option>
+					<option value="Fortran">Fortran</option>
+					<option value="Groovy">Groovy</option>
+					<option value="Haskell">Haskell</option>
+					<option value="Java">Java</option>
+					<option value="JavaScript">JavaScript</option>
+					<option value="Lisp">Lisp</option>
+					<option value="Perl">Perl</option>
+					<option value="PHP">PHP</option>
+					<option value="Python">Python</option>
+					<option value="Ruby">Ruby</option>
+					<option value="Scala">Scala</option>
+					<option value="Scheme">Scheme</option>
+					<option value="Русский">Русский</option>
+					<option value="Украинский">Украинский</option>
+				</label>
+
+			</select>
+		</div>
+		<!-- checkbox -->
+		<h1>checkbox</h1>
+		<main>
+			<section class="jQ_checkbox">
+				<h2>jquery realization</h2>
+				<form>
+					<div><label for="ch1">label 1</label><input type="checkbox" class="niceCheck" id="ch1" tabindex="1" /> </div>
+					<div><label for="ch2">label 2</label><input type="checkbox" class="niceCheck" checked="checked" id="ch2" tabindex="2" value="2" /></div>
+					<div><label for="ch3">label 3</label><input type="checkbox" class="niceCheck" id="ch3" checked="checked" disabled="disabled" /></div>
+				</form>
+			</section>
+			
+			<section class="css_checkbox">
+				<h2>css realization</h2>
+				<form>
+					<div>
+						<input type="checkbox" id="ch4" tabindex="1">
+						<label for="ch4">label css 1</label>
+					</div>
+					<div>
+						<input type="checkbox" checked="checked" id="ch5" tabindex="2" value="2">
+						<label for="ch5">label css 2</label>
+					</div>
+					<div>
+						<input type="checkbox" id="ch6" checked="checked" disabled="disabled">
+						<label for="ch6">label css 3</label>
+					</div>
+				</form>
+			</section>
+
+		</main>
+	</section>
+
+
+	<!-- SCRIPTS -->
+	<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.0.js"></script>
+	<script src="js/jquery.jcarousel.js"></script>
+	<script src='js/jcarousel.responsive.js'></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+	<script src='js/script.js'></script>
+	<script src='js/jquery.checkbox.js'></script>
+	<script scr='js/jquery.color.js'></script>
 </body>
 </html>

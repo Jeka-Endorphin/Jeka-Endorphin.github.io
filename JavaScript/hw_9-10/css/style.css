@@ -1,46 +1,227 @@
-/*
-This is the visible area of you carousel.
-Set a width here to define how much items are visible.
-The width can be either fixed in px or flexible in %.
-Position must be relative!
-*/
-.jcarousel {
-    position: relative;
-    overflow: hidden;
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: linear-gradient(to right, rgba(249, 151, 3, 0.55),rgba(236, 213, 150, 0.42),rgba(247, 241, 229, 0.68), rgba(236, 213, 150, 0.42), rgba(249, 151, 3, 0.55)); 
+  margin: 0;
+  padding: 0;
+  font: 15px/1.5 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #4E443C;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.75);
 }
 
-/*
-This is the container of the carousel items.
-You must ensure that the position is relative or absolute and
-that the width is big enough to contain all items.
-*/
-.jcarousel ul {
-    width: 20000em;
-    position: relative;
+h1,  h3, h4, h5, h6 {
+  font-family: 'Arvo', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  text-align: center;
+  font-weight: normal;
+  text-rendering: optimizelegibility;
+}
 
-    /* Optional, required in this case since it's a <ul> element */
-    list-style: none;
-    margin: 0;
+h1 {
+  margin-top: 50px;
+    color: #4E443C;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+h2, h2 a {
+    color: #0388A6;
+    text-align: left;
+}
+
+h3, h3 a {
+  color: #0388A6;
+}
+
+section {
+  position: relative;
+  max-width: 620px;
+  padding: 0 20px 40px 20px;
+  margin: auto;
+}
+select {
+  display: block;
+  width: 100%;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/*navigation*/
+
+nav {
+    /*height: 45px;*/
+    padding: 10px 0;
+    background-color: rgb(255,100,100);
+}
+
+nav > ul {
+
+    list-style-type: none;
+    margin: 0 0 0 150px;
+    padding: 0;  
+}
+
+nav ul li {
+    display: inline-block;
+    position: relative;
+}
+
+/* sub navigation */
+nav li ul {    
+    position:absolute;
+    left:0;
+    top:40px; /* make this equal to the line-height of the links (specified below) */
+    width:200px;
+}
+
+nav li li {
+    position:relative;
+    margin:0;
+    display:block;
+}
+
+nav li li ul {
+    position:absolute;
+    top:0;
+    left:200px; /* make this equal to the width of the sub nav above */
+    margin:0;
+}
+
+/* style all links */
+nav a {
+    line-height: 40px;
+    padding: 0 12px;
+    margin: 0 12px;
+    display: block;
+}
+
+nav a:hover,
+nav a:focus,
+nav a:active {
+    color:rgb(50,50,50);
+}
+
+/* style sub level links */
+nav li li a {
+    border-bottom: solid 1px rgb(200,50,50);
+    margin: 0 10px;
     padding: 0;
 }
+nav li li:last-child a {
+    border-bottom:none;
+}
 
+nav li.dropdown > a::after {
+    content: '';
+    position: absolute;
+    bottom: 12px;
+    right: 5px;
+    border-width: 4px 4px;
+    border-style: solid;
+    border-color: #fff transparent transparent;
+}
+
+
+nav li li.dropdown > a::after {
+  content: '';
+  position: absolute;
+  bottom: 16px;
+  right: 9px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 4px 0 4px 4px;
+  border-color: transparent transparent transparent #fff;
+}
+
+.sub-menu {
+  display: none;
+  z-index: 3;
+  background-color:rgb(225,75,75);
+  /*transition: all 3s;*/
+}
 /*
-These are the item elements. jCarousel works best, if the items
-have a fixed width and height (but it's not required).
-*/
-.jcarousel li {
-    /* Required only for block elements like <li>'s */
-    height: 280px;
-    float: left;
+.sub-menu__shown {
+  display: block;
+  background-color:rgb(225,100,50);
+}*/
 
-}
-.wrap_jcarousel{
-    width: 800px;
-    margin: 10px auto;
-    position: relative;
+/*checkbox*/
+main {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  overflow: hidden;
 }
 
-img {
-    height: 100%;
-    /*width: 100%;*/
+form {
+  margin-left: 50px;
+  padding: 10px;
+}
+
+label {
+  cursor: pointer;
+}
+
+.niceCheck {
+  width: 17px;
+  height: 17px;
+  display: inline-block;
+  cursor: pointer;
+  background: url(../img/checkbox.png);
+  overflow: hidden;
+}
+.niceChecked {
+  background-position: 0 -17px;
+}
+.niceCheck input {
+  margin-left: -100px;
+}
+form div {
+  margin-bottom: 10px;
+}
+.niceCheckDisabled {
+  background-image: url(../img/checkbox-disabled.png);
+}
+
+.css_checkbox input[type=checkbox] {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+}
+
+label {
+  cursor: pointer;
+}
+.css_checkbox label:after {
+  content: " ";
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  background: url(../img/checkbox-2.png);
+  position: relative;
+  top: 3px;
+  margin-left: 15px;
+}
+.css_checkbox input[type=checkbox]:checked + label:after {
+background-position: 0 -17px;
+}
+.css_checkbox label:hover:after {
+background-position: 0 -34px;
+}
+.css_checkbox input[type=checkbox]:checked + label:hover:after {
+background-position: 0 -51px;
+}
+.css_checkbox input[type=checkbox]:disabled + label{
+  color: #999;
+}
+
+.css_checkbox input[type=checkbox]:disabled + label:after {
+  background-image: url(../img/checkbox-disabled.png);
+  background-position: 0 -17px;
 }

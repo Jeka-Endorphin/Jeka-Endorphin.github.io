@@ -38,12 +38,7 @@ var wrapInput = input.parent();
 	}
 }
 
-function changeCheckStart(el)
-/* 
-	новый чекбокс выглядит так <span class="niceCheck"><input type="checkbox" name="[name check]" id="[id check]" [checked="checked"] /></span>
-	новый чекбокс получает теже name, id и другие атрибуты что и были у обычного
-*/
-{
+function changeCheckStart(el){
 
 try
 {

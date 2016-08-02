@@ -1,33 +1,45 @@
 'use strict'
 
 $(function() {
-  
-  var $tabs = $('.area > div');
-  var $paragraphAll = $(".task1__wrapper p");
 
-  $tabs.on('click', function(e) {
-    $tabs.removeClass('active');
-    var $tab = $(e.target);
-    var $tabClass = e.target.className;
-    $tab.addClass('active');
-    var $paragraph = $('p.'+ $tabClass); 
-    $paragraphAll.hide(500);
-    $paragraph.show('fast');
-  })
+  $('.tab-list li').on('click', function(e) {
+    var currentEl = $(this).data('tab');
+    console.log(currentEl);
+    $('.tab-list li').removeClass('active');
+    $(this).addClass('active');
 
-  var $inp = $('form input');
-  var $help = $('.help');
+    $('.tab-item').css({
+      'visibility': 'hidden',
+      'opacity': '0'
+    });
+
+    $('#'+currentEl).css({
+      'visibility': 'visible',
+      'opacity': '1'
+    })
+  });
+
+
+  $('.row').hover(
+    function(){
+      $(this).find('.help').css({
+        'visibility': 'visible',
+        'opacity': '1'
+      })
+    },
+    function(){
+      $(this).find('.help').css({
+        'visibility': 'hidden',
+        'opacity': '0'
+      })
+    });
+
   var $button = $('.task2 button');
-
-  $inp.hover(function (e) {
-    var $target = $(e.target);
-    $target.next().show('fast');
-  }, function (e) {
-    var $target = $(e.target);
-    $target.next().hide(1000);
-  })
-
   $button.on('click', function (e) {
-    $help.show('fast');
-  })
+    $('.help').css({
+      'visibility': 'visible',
+      'opacity': '1'
+    })
+  });
+
 });

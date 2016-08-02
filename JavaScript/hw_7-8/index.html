@@ -1,41 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>JS home 7-8 Task 1 </title>
+	<meta charset="UTF-8">
+	<title>JS home 7-8 Task 1 </title>
 	<script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script> 
-    <link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 	<section class="task1">
 		<h1>Task 1</h1>	
 		<div class="task1__wrapper">
-			<div class="area clearfix">
-				<div class="tab1 active">Закладка 1</div>
-				<div class="tab2">Закладка 2</div>
-				<div class="tab3">Закладка 3</div>
+			<ul class="tab-list clearfix">
+				<li data-tab='tab1' class="active">Закладка 1</li>
+				<li data-tab='tab2'>Закладка 2</li>
+				<li data-tab='tab3'>Закладка 3</li>
+			</ul>
+			<div class="tabs">
+				<p id='tab1' class="tab-item" style="visibility: visible; opacity: 1;" >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, reprehenderit, distinctio ut illum ullam magni obcaecati dolorum nesciunt voluptas natus expedita quo? Tenetur, incidunt, aspernatur. Maxime natus quos numquam eligendi!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, reprehenderit, distinctio ut illum ullam magni obcaecati dolorum nesciunt voluptas natus expedita quo? Tenetur, incidunt, aspernatur. Maxime natus quos numquam eligendi!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, reprehenderit, distinctio ut illum ullam magni obcaecati dolorum nesciunt voluptas natus expedita quo? Tenetur, incidunt, aspernatur. Maxime natus quos numquam eligendi!</p>
+				<p id='tab2' class="tab-item">Voluptatibus sint necessitatibus commodi autem fuga sed excepturi deleniti exercitationem possimus officiis nemo non repudiandae numquam, a dicta laboriosam, expedita eius facilis!Voluptatibus sint necessitatibus commodi autem fuga sed excepturi deleniti exercitationem possimus officiis nemo non repudiandae numquam, a dicta laboriosam, expedita eius facilis!Voluptatibus sint necessitatibus commodi autem fuga sed excepturi deleniti exercitationem possimus officiis nemo non repudiandae numquam, a dicta laboriosam, expedita eius facilis!</p>
+				<p id='tab3' class="tab-item"> Debitis impedit saepe, odit illum ea, consectetur sit assumenda facere nam enim nostrum, ipsum, magni? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate sit repudiandae voluptatum fugiat, facilis magnam.Debitis impedit saepe, odit illum ea, consectetur sit assumenda facere nam enim nostrum, ipsum, magni? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate sit repudiandae voluptatum fugiat, facilis magnam.Debitis impedit saepe, odit illum ea, consectetur sit assumenda facere nam enim nostrum, ipsum, magni? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate sit repudiandae voluptatum fugiat, facilis magnam.</p>
 			</div>
-			<p class="tab1 show">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, reprehenderit, distinctio ut illum ullam magni obcaecati dolorum nesciunt voluptas natus expedita quo? Tenetur, incidunt, aspernatur. Maxime natus quos numquam eligendi!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, reprehenderit, distinctio ut illum ullam magni obcaecati dolorum nesciunt voluptas natus expedita quo? Tenetur, incidunt, aspernatur. Maxime natus quos numquam eligendi!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, reprehenderit, distinctio ut illum ullam magni obcaecati dolorum nesciunt voluptas natus expedita quo? Tenetur, incidunt, aspernatur. Maxime natus quos numquam eligendi!</p>
-			<p class="tab2">Voluptatibus sint necessitatibus commodi autem fuga sed excepturi deleniti exercitationem possimus officiis nemo non repudiandae numquam, a dicta laboriosam, expedita eius facilis!Voluptatibus sint necessitatibus commodi autem fuga sed excepturi deleniti exercitationem possimus officiis nemo non repudiandae numquam, a dicta laboriosam, expedita eius facilis!Voluptatibus sint necessitatibus commodi autem fuga sed excepturi deleniti exercitationem possimus officiis nemo non repudiandae numquam, a dicta laboriosam, expedita eius facilis!</p>
-			<p class="tab3"> Debitis impedit saepe, odit illum ea, consectetur sit assumenda facere nam enim nostrum, ipsum, magni? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate sit repudiandae voluptatum fugiat, facilis magnam.Debitis impedit saepe, odit illum ea, consectetur sit assumenda facere nam enim nostrum, ipsum, magni? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate sit repudiandae voluptatum fugiat, facilis magnam.Debitis impedit saepe, odit illum ea, consectetur sit assumenda facere nam enim nostrum, ipsum, magni? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate sit repudiandae voluptatum fugiat, facilis magnam.</p>
 		</div>
 	</section>
 
 	<h1>Task 2</h1>		
 	<section class="task2">
 		<form action="">
-			<div>
+			<div class="row">
 				<label for="firstname">Firstname</label> 
 				<input type="text" id='firstname' title="Please provide your firstname.">
 				<span class="help">Please provide your firstname.</span>
 			</div>
-			<div>
+			<div class="row">
 				<label for="lastname">Lastname</label>
 				<input type="text" id="lastname" title="Please provide also your lastname.">
 				<span class="help">Please provide your lastname.</span>
-
 			</div>
-			<div>
+			<div class="row">
 				<label for="address">Address</label>
 				<input type="text" id="address" title="Your home or work address.">
 				<span class="help">Your home or work address.</span>

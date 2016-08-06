@@ -1,0 +1,149 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+html {
+	background-color: #EFEFEF; 
+}
+
+body {
+	width: 700px;
+	margin: 8px auto 40px auto;
+	background-color: #fff;
+	box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.17);
+}
+
+header,
+main, 
+section,
+footer {
+	width: 500px;
+	padding: 20px 40px 0;
+	font-size: 23px;
+	margin: 0 auto 15px;
+}
+
+header {
+	padding-top: 65px;
+	text-align: center;
+}
+
+h1 {
+	padding-bottom: 20px;
+	font-size: 40px;
+}
+
+a {
+	font: 22px Arial, sans-serif;
+	text-decoration: none;
+	color: #111;
+}
+
+p {
+	padding-bottom: 15px;
+}
+
+.photo {
+	height: 250px;
+	border-radius: 10px;
+	margin-bottom: 15px;
+}
+
+main {
+	padding-bottom: 15px;
+	border-bottom: 1px solid black;
+}
+
+ul {
+	line-height: 35px;
+	padding-left: 30px;
+}
+.span1 {
+	color: grey
+}
+
+section p:nth-child(2) {
+	padding-bottom: 30px;
+} 
+
+footer {
+	padding-bottom: 70px;
+}
+
+/*carousel*/
+
+#Carousel {
+	background: -webkit-linear-gradient(rgba(255,255,255,1) 0%, rgba(207,207,207,1) 28%, rgba(207,207,207,1) 66%, rgba(255,255,255,1) 100%);
+	background: -o-linear-gradient(rgba(255,255,255,1) 0%, rgba(207,207,207,1) 28%, rgba(207,207,207,1) 66%, rgba(255,255,255,1) 100%);
+	background: linear-gradient(rgba(255,255,255,1) 0%, rgba(207,207,207,1) 28%, rgba(207,207,207,1) 66%, rgba(255,255,255,1) 100%);
+	overflow: hidden;
+}
+
+.carousel-hider {
+	width: 645px;
+	padding: 0;
+	overflow: hidden;
+	float: left;
+}
+
+.carousel-list {
+	position: relative;
+    width: 20000px;
+    padding: 0;	
+    line-height: 20px;
+	list-style: none;
+}
+
+.carousel-list p {
+	padding: 0;
+	text-align: center;
+}
+ 
+.carousel-element {
+    display: block;
+    margin-right: 15px;
+    padding-top: 15px;
+    float: left;
+}
+ 
+.carousel-element img {
+    max-width: 150px;
+}
+
+.carousel-arrow-left, .carousel-arrow-right {
+	padding: 5px 10px;
+    float: left;
+    border: 1px solid #000;
+    float: left;
+    display: block;
+    border: 1px solid grey;
+    background-color: #eee;
+    margin-top: 50px;
+    cursor: pointer;
+}
+
+.carousel-arrow-left:hover,
+.carousel-arrow-right:hover {
+    background-color: #fff;
+}
+
+/*tamplate*/
+.mod {
+	margin-top: 100px;
+	width: 300px;
+	height: 150px;
+	background-color: green;
+	clear: both;
+}
+.box {
+	color: #fff;
+}
+.odd {
+	background-color: #990;
+	color: #009;
+}
+.blue {
+	background-color: #009;
+}
+

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Simple jQuery carousel and template</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+		<!-- Template -->
+	<script type='text/html' id="intro">
+		<header>
+				<h1><%= name %></h1>
+				<img class="photo" src="<%= photoLink %>" alt="Avatar">
+				<p><%= work %></p>
+		</header>
+		<main>
+			<!-- <div class="goals"> -->
+			<%= goal%>	
+				<ul>
+					<% for(var i=0; i < goalItems.length ; i++) {%>
+					<li><%= goalItems[i] %></li>
+					<% } %>					
+				</ul>			
+			<!-- </div>	 -->
+		</main>
+		<section>		
+			<p><%= tel %></p>
+			<p><%= skype %></p>
+			<p class="main"><%= vkStr %><a href=" <%= vkLink %>" target="_blanck"><%= vkLink %></a></p>
+		</section>	
+	</script>
+
+	<!-- Template -->
+	<script type='text/html' id="footer">
+		<footer>
+			<p><%= feedbackTitle%></p>
+			<p><%= feedbackText%></p>
+		</footer>
+	</script>
+
+
+	<!-- Carousel -->
+	<article id="Carousel">
+		<div class="carousel-arrow-left"><span>‹</span></div>
+		<div class="carousel-hider">
+			<ul class="carousel-list">
+				<li class="carousel-element">
+					<img src="img/image1.jpg" alt="">
+					<p>Описание 1</p>
+				</li>
+				<li class="carousel-element">
+					<img src="img/image2.jpg" alt="">
+					<p>Описание 2</p>
+				</li>
+				<li class="carousel-element">
+					<img src="img/image3.jpg" alt="">
+					<p>Описание 3</p>
+				</li>
+				<li class="carousel-element">
+					<img src="img/image4.jpg" alt="">
+					<p>Описание 4</p>
+				</li>
+				<li class="carousel-element">
+					<img src="img/image5.jpg" alt="">
+					<p>Описание 5</p>
+				</li>
+				<li class="carousel-element">
+					<img src="img/image6.jpg" alt="">
+					<p>Описание 6</p>
+				</li>
+				<li class="carousel-element">
+					<img src="img/image7.jpg" alt="">
+					<p>Описание 7</p>
+				</li>
+				<li class="carousel-element">
+					<img src="img/image8.jpg" alt="">
+					<p>Описание 8</p>
+				</li>
+				<li class="carousel-element">
+					<img src="img/image9.jpg" alt="">
+					<p>Описание 9</p>
+				</li>
+				<li class="carousel-element">
+					<img src="img/image10.jpg" alt="">
+					<p>Описание 10</p>
+				</li>
+				<li class="carousel-element">
+					<img src="img/image11.jpg" alt="">
+					<p>Описание 11</p>
+				</li>
+			</ul>
+		</div>
+		<div class="carousel-arrow-right"><span>›</span></div>
+	</article>
+
+	
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script src='js/tmpl_resig.js'></script>
+	<script src='js/mySlider.js'></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js'></script>
+	<script src='js/script.js'></script>
+
+</body>
+</html>

@@ -6,22 +6,20 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-		<!-- Template -->
+	<!-- Template -->
 	<script type='text/html' id="intro">
 		<header>
-				<h1><%= name %></h1>
-				<img class="photo" src="<%= photoLink %>" alt="Avatar">
-				<p><%= work %></p>
+			<h1><%= name %></h1>
+			<img class="photo" src="<%= photoLink %>" alt="Avatar">
+			<p><%= work %></p>
 		</header>
 		<main>
-			<!-- <div class="goals"> -->
 			<%= goal%>	
-				<ul>
-					<% for(var i=0; i < goalItems.length ; i++) {%>
-					<li><%= goalItems[i] %></li>
-					<% } %>					
-				</ul>			
-			<!-- </div>	 -->
+			<ul>
+				<% for(var i=0; i < goalItems.length ; i++) {%>
+				<li><%= goalItems[i] %></li>
+				<% } %>					
+			</ul>			
 		</main>
 		<section>		
 			<p><%= tel %></p>
@@ -30,7 +28,7 @@
 		</section>	
 	</script>
 
-	<!-- Template -->
+	<!-- Template footer -->
 	<script type='text/html' id="footer">
 		<footer>
 			<p><%= feedbackTitle%></p>
@@ -92,8 +90,6 @@
 		</div>
 		<div class="carousel-arrow-right"><span>›</span></div>
 	</article>
-
-	
 	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 	<script src='js/tmpl_resig.js'></script>

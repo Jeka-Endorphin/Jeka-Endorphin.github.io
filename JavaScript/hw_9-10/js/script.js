@@ -3,18 +3,14 @@
 $(function() {
 
 	// nav
-	$('.dropdown').on( "mouseenter mouseleave", function( event ){
-		$(this).children('.sub-menu')
-				.slideToggle(1000)
-				// .addClass('sub-menu__shown')
-				// .animate({
-				// 	'background':"#03C",
-				// }, 1000 );
-
+	$('.dropdown').hover(function(){
+		$(this).children('.sub-menu').addClass('sub-menu__shown');
+		},function() {
+		$(this).children('.sub-menu').removeClass('sub-menu__shown');		
 	});
 
 
-// jcarousel
+	// jcarousel
 	$('.jcarousel').jcarousel({
 		list: '.jcarousel-list'
 	});
@@ -24,7 +20,6 @@ $(function() {
 	$('.jcarousel-next').jcarouselControl({ target: '+=1' });
 	
 	$('img').on('click', function () {
-		console.log('img');
 		$('.jcarousel').jcarousel('scroll', '+=2');
 	});
 
@@ -51,7 +46,6 @@ $(function() {
 
 	// checkbox
 	$(".niceCheck").each(
-		 // при загрузке страницы меняем обычные на стильные checkbox 
 		function() {
 			changeCheckStart(jQuery(this));
 		});

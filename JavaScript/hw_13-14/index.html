@@ -8,7 +8,7 @@
 <body>
 	
 	<script type="text/html" id="html">
-		<form action="#" class="form__test" method="POST">
+		<form action="#" method="POST">
 			<h2>Тест по програмированию</h2>
 			<ol>
 				<% for (var i = 0; i < data.questions.length; i++) { %>
@@ -16,7 +16,7 @@
 					<h4><%= data.questions[i] %></h4>
 					<% for (var j = 0; j < data.answers[i].length; j++) { %>
 					<div>
-						<input type="radio" id="<%= 'q' + i + 'a' + j %>" name = "<%= 'q' + i%>"  value="<%= 'q' + i + 'a' + j %>">
+						<input type="radio" id="<%= 'q' + i + 'a' + j %>" name = "<%= 'q' + i%>" value="<%= 'q' + i + 'a' + j %>">
 						<label for="<%= 'q' + i + 'a' + j %>"><%= data.answers[i][j] %></label>
 					</div>
 					<% } %>

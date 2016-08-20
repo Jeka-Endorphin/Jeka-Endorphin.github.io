@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Local Storage & Template</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	
+	<script type="text/html" id="html">
+		<form action="#" class="form__test" method="POST">
+			<h2>Тест по програмированию</h2>
+			<ol>
+				<% for (var i = 0; i < data.questions.length; i++) { %>
+				<li>
+					<h4><%= data.questions[i] %></h4>
+					<% for (var j = 0; j < data.answers[i].length; j++) { %>
+					<div>
+						<input type="radio" id="<%= 'q' + i + 'a' + j %>" name = "<%= 'q' + i%>"  value="<%= 'q' + i + 'a' + j %>">
+						<label for="<%= 'q' + i + 'a' + j %>"><%= data.answers[i][j] %></label>
+					</div>
+					<% } %>
+				</li>
+				<% } %>
+			</ol>
+			<input type="submit" name="" id="submit" value="Проверить мои результаты">
+		</form>
+	</script>
+
+	<script src="http://code.jquery.com/jquery-3.1.0.js" integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk=" crossorigin="anonymous"></script>	
+	<script src='js/tmpl_resig.js'></script>
+	<script src="js/data.js"></script>
+	<script src="js/script.js" type="text/javascript"></script>
+</body>
+</html>

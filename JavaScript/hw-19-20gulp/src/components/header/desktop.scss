@@ -1,0 +1,152 @@
+& {
+  position: relative;
+  width: $main-width;
+  margin: 0 auto;
+  padding-top: 20px;
+
+  &__site-title {
+    color: $color_site-title;
+    font-family: $font-headers;
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 23px;
+
+    &::before {
+      display: block;
+      width: 36px;
+      height: 36px;
+      margin-right: 12px;
+      float: left;
+      background: url( $img + 'header-icon.png');
+      content: '';
+    }
+
+    &__span {
+      display: block;
+      font-size: 12px;
+      font-weight: 300;
+      letter-spacing: 3.5px;
+      line-height: 20px;
+      text-transform: uppercase;
+    }
+  }
+
+  &__socials {
+    padding-top: 12px;
+    float: right;
+
+    li {
+      display: inline-block;
+      padding-left: 18px;
+    }
+
+    a { display: inline-block; }
+
+    &__facebook {
+      width: 10px;
+      height: 18px;
+      background: url( $social-sprite );
+
+      &:hover { background: url( $social-sprite ) 0 -18px; }
+    }
+
+    &__twitter {
+      width: 15px;
+      height: 17px;
+      background: url( $social-sprite ) -11px 0;
+
+      &:hover { background: url( $social-sprite ) -11px -17px; }
+    }
+
+    &__rrc {
+      width: 17px;
+      height: 16px;
+      background: url( $social-sprite ) -27px 0;
+
+      &:hover { background: url( $social-sprite ) -27px -18px; }
+    }
+
+    &__linked-in {
+      width: 18px;
+      height: 17px;
+      background: url( $social-sprite ) -45px 0;
+
+      &:hover { background: url( $social-sprite ) -45px -18px; }
+    }
+
+    &__skype {
+      width: 17px;
+      height: 17px;
+      background: url( $social-sprite ) -62px 0;
+
+      &:hover { background: url( $social-sprite ) -62px -17px; }
+    }
+  }
+
+  .menu {
+    position: relative;
+    margin-top: 36px;
+    background: $menu-color;
+
+    &__list { font-size: 0; }
+
+    &__item {
+      display: inline-block;
+      padding: 0;
+      border-right: 1px solid $black;
+      line-height: 0;
+
+      &:first-child { background-color: $hover-blue; }
+    }
+
+    &__link {
+      display: block;
+      margin: 0;
+      padding: 20px 40px;
+      color: $color_link;
+      font: 12px / 14px $font-menu;
+      text-decoration: none;
+      text-transform: uppercase;
+
+      &:active { background-color: $hover-blue; }
+
+      &:hover { color: $yellow; }
+    }
+  }
+
+  &__search {
+    position: absolute;
+    top: 6px;
+    right: 7px;
+
+    &__input[type=search] {
+      width: 130px;
+      height: 40px;
+      padding: 10px;
+      transition: width .4s, border-radius .4s;
+      border: 1px solid $black;
+      outline: none;
+      background-color: $color-search;
+      color: $color_search-text;
+      font: $paragraph;
+      font-size: 12px;
+
+      &:focus {
+        width: 200px;
+        border-radius: 4px;
+      }
+    }
+
+    &__icon {
+      position: absolute;
+      top: 15px;
+      right: 10px;
+      width: 14px;
+      height: 14px;
+      background: $color-search url( $img + 'search.png');
+      cursor: pointer;
+      z-index: 1;
+    }
+  }
+
+}

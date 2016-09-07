@@ -1,0 +1,7 @@
+    @import '../variables';
+    
+.wrapper {
+	width: $wrapper;
+	margin: 0 auto;
+}
+	@include clearfix;

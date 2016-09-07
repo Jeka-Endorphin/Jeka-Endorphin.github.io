@@ -1,0 +1,19 @@
+& {
+    h1 {
+        font-family: 'PT Sans';
+        font-size: px(48, $m);
+        color: blue;
+
+	        &::after {
+				content:'desktopWide';
+				position: absolute;
+				width: 100px;
+				height: 20px;
+				bottom: 0;
+				left: 0;
+				background-color: green;
+	  			color: yellow;
+				z-index: 5;
+	   		}
+    }
+}

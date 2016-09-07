@@ -1,0 +1,63 @@
+& {
+  width: $main-width;
+  height: 60px;
+  margin: 0 auto;
+  color: $color-content;
+  font: $paragraph;
+
+  &-wrapper {
+    width: $wrapper;
+    background-color: $color-footer;
+  }
+
+  &__adress,
+  &__tel,
+  &__mail{
+    display: inline-block;
+    position: relative;
+    padding-left: 50px;
+    line-height: 60px;
+    
+    &__link {
+      color: $color-content;
+      text-decoration: none;
+    }
+  }
+
+  &__adress::before,
+  &__tel::before,
+  &__mail::before {
+    position: absolute;
+    content: '';
+  }
+
+  &__adress::before {
+    top: 22px;
+    left: 30px;
+    width: 12px;
+    height: 15px;
+    background-image: url( $img + 'footer-location.png');
+  }
+
+  &__tel::before {
+    top: 20px;
+    left: 33px;
+    width: 10px;
+    height: 17px;
+    background-image: url( $img + 'footer-iPhone-potrait.png');
+  }
+
+  &__mail::before {
+    top: 23px;
+    left: 27px;
+    width: 16px;
+    height: 13px;
+    background-image: url( $img + 'footer-front-email.png');
+  }
+
+  &__copyright {
+    padding-right: 2px;
+    float: right;
+    line-height: 60px;
+  }
+}

@@ -1,0 +1,159 @@
+& {
+  background-color: $color_add-bg;
+
+  &-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: $main-width;
+    margin: 0 auto;
+    padding-bottom: 60px;
+  }
+}
+
+.news {
+  width: 600px;
+
+  &__title {
+    @include h-services;
+    padding: 60px 2px 48px;
+  }
+
+  &__item {
+    position: relative;
+    padding-bottom: 28px;
+
+    &__title {
+      @include h-services;
+      font-size: 16px;
+      font-weight: bold;
+      text-transform: capitalize;
+
+      &:hover { color: $hover-blue; }
+    }
+
+    &__img {
+      float: left;
+      padding-right: 35px;
+    }
+
+    p {
+      color: $color-content;
+      font: $paragraph;
+      
+    }
+
+    &__author,
+    &__comments {
+      color: $hover-blue;
+      font-weight: bold;
+    }
+
+    &__content {
+      width: 380px;
+      height: 80px;
+      margin-top: 25px;
+      font: $paragraph;
+      color: $color-content;
+      overflow: hidden;
+    }
+
+    &__date-month {
+      display: block;
+      position: absolute;
+      top: 12px;
+      left: -17px;
+      width: 40px;
+      height: 40px;
+      background-color: $hover-blue;
+      color: #fff;
+      font: 300 15px/40px Ubuntu, Arial, sans-serif;
+      text-align: center;
+    }
+
+    &__date {
+      display: block;
+      position: absolute;
+      top: 52px;
+      left: -17px;
+      width: 40px;
+      height: 40px;
+      background-color: $yellow;
+      color: #000;
+      font: 400 15px/40px Ubuntu, Arial, sans-serif;
+      text-align: center;
+    }
+  }
+}
+
+.banners {
+  width: 580px;
+
+  &__title {
+    @include h-services;
+    padding: 60px 2px 48px;
+  }
+
+  &__item {
+    &__title {
+      position: relative;
+      height: 39px;
+      margin-bottom: 5px;
+      margin-left: 39px;
+      padding: 10px 10px;
+      border: 1px solid $color_add-title--bd;
+      background-color: $color_add-title--bg;
+      color: $color_add-title;
+      font: $accordion-font;
+      text-transform: uppercase;
+      cursor: pointer;
+      box-sizing: border-box;
+
+      &::before {
+        display: block;
+        position: absolute;
+        top: -1px;
+        left: -38px;
+        width: 38px;
+        height: 39px;
+        padding: 10px 0;
+        border: 1px solid $color_add-title--bd;
+        background-color: $color_add-title--bg;
+        font-size: 20px;
+        font-weight: 300;
+        text-align: center;
+        vertical-align: middle;
+        content: '+';
+      }
+
+      &:focus,
+      &:hover,
+      &:active { outline: none; }
+    }
+
+    &__content {
+      margin: 30px 0 40px 35px;
+      color: $color-content;
+      font: $paragraph;
+    }
+  }
+}
+
+.ui-accordion-header-active {
+  border: 1px solid $color_add-title--active;
+  background-color: $color_add-title--active;
+  color: $color_add-title--bg;
+
+  &::before {
+    border: 1px solid $color_add-title--active;
+    border-right: 1px solid $color_add-title--active-bd;
+    background-color: $yellow;
+    font-size: 30px;
+    font-weight: 300;
+    line-height: 50%;
+    content: '-';
+  }
+
+  &:focus,
+  &:hover,
+  &:active { outline: none }
+}

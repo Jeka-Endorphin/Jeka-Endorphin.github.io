@@ -1,0 +1,5 @@
+@media #{$tabletPortrait} {
+    $m: tabletPortrait;
+
+    @import '../mobile';
+}

@@ -1,0 +1,5 @@
+@media #{$desktop} {
+    $m: desktop;
+
+    @import '../desktop';
+}

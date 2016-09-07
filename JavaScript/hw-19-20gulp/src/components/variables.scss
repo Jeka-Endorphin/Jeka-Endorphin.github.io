@@ -1,0 +1,81 @@
+// sizes
+$wrapper: 100vw;
+$main-width: 1160px;
+$slider-height: 470px;
+
+//paths
+$img: '../images/';
+$social-sprite: '../images/socials.png';
+
+// fonts
+$font-headers: Ubuntu, Helvetica, Arial, sans-serif;
+$paragraph: 13px/20px Arial, sans-serif;
+$font-menu: 'Ubuntu Condensed', Ubuntu, Arial, sans-serif;
+$accordion-font: 13px/20px Ubuntu, Arial, sans-serif;
+$font-menu-bottom: 500 16px/20px Ubuntu, Arial, sans-serif;
+
+//colors 
+$yellow: #f0b50f;
+$hover-blue: #248cec;
+$black: #000;
+$color-content: #8a8a8a;
+$color_link: #fff;
+$color_big-number: rgba(233, 233, 233, .8);
+$menu-color: #2a2d32;
+$headers-color: #2a2b2e;
+$color_site-title: #434343;
+$soc-color: #ccc;
+$color-search: #393c40;
+$color_search-text: #bbb;
+$color-services: #2a2d32;
+$color_add-bg: #f7f7f7;
+$color_add-title: $headers-color;
+$color_add-title--bg: #fff;
+$color_add-title--bd: #e8e8e8;
+$color_add-title--active: $yellow;
+$color_add-title--active-bd: #f6c53d;
+$color-menu-bottom: $color-services;
+$color-footer: #35383c;
+$color-submenu-underline: $color-search;
+
+@mixin clearfix {
+	.clearfix::after {
+		content: '';
+		clear: both;
+		display: block;
+		height: 0;
+		visibility: hidden;
+	}
+}
+
+@mixin link() {
+  padding-left: 8px;
+  text-decoration: none;
+  color: $hover-blue;
+  font: 800 20px/20px Ubuntu, Arial, sans-serif;
+}
+
+@mixin h-services {
+  font: 500 24px/20px Ubuntu, Arial, sans-serif;
+  color: $headers-color;
+}
+
+@mixin slick-button ($name, $side) {
+	.slick-#{$name}{
+       	position: absolute;
+		height: 100%;
+		width: 70px;
+		top: 0;
+		#{$side}: 0;
+		border: none;
+	    outline: none;
+	    background: transparent;
+	    color: transparent;
+		z-index: 5;
+
+		&:hover {
+			background-color: rgba(0,0,0,.2);
+		}
+    }
+
+}

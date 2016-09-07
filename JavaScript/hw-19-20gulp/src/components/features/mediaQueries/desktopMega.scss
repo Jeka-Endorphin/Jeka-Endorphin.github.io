@@ -1,0 +1,6 @@
+@media #{$desktopMega} {
+    $m: desktopMega;
+
+    @import '../desktop';
+
+}

@@ -1,0 +1,6 @@
+@media #{$desktopWide} {
+    $m: desktopWide;
+
+    @import '../desktop';
+
+}

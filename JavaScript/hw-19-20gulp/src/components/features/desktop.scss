@@ -1,0 +1,69 @@
+& {
+  display: flex;
+  width: $main-width;
+  margin: 0 auto;
+  padding: 58px 0 85px;
+
+  &__item {
+    position: relative;
+    width: 33%;
+    padding-left: 120px;
+    background: url( $img + 'icon-settings.png') 120px top no-repeat;
+    box-sizing: border-box;
+
+    &--technologies {
+      background-image: url( $img + 'icon-params.png');
+    }
+
+    &--support {
+      background-image: url( $img + 'icon-truck.png');
+    }
+  }
+
+  &__number {
+    position: absolute;
+    top: 3px;
+    left:0;
+    color: $color_big-number;
+    font: 90px/60px $font-headers;
+  }
+
+  &__title {
+    padding-top: 47px;
+    color: $headers-color;
+    font: 20px / 20px $font-headers;
+  }
+  
+  &__content {
+    height: 100px;
+    margin-bottom: 20px;
+    padding: 20px 30px 0 0;
+    transition: all 1s;
+    font: $paragraph;
+    color: $color-content;
+    overflow: hidden;
+
+    &.height-auto {
+      height: auto;
+      transition: height .4s;
+    }
+  }
+
+  &__expand {
+
+    &__link {
+      color: $headers-color;
+      font: 500 13px/20px $font-headers;
+      text-decoration: none;
+
+      &:hover { color: $hover-blue; }
+    }
+
+    &__link:hover ~ &__arrow { color: $color-content; }
+
+    &__arrow { 
+      @include link(); 
+      font-size: 15px;
+    }
+  }
+}

@@ -1,0 +1,37 @@
+& {
+  padding: 40px 0 70px;
+  background: $color-menu-bottom;
+
+  &__list {
+    display: flex;
+    justify-content: space-around;
+    width: $main-width;
+    margin: 0 auto;
+    font: $font-menu-bottom;
+  }
+
+  &__item {
+    width: 25%;
+    padding-left: 40px;
+    color: #fff;
+    text-decoration: none;
+    box-sizing: border-box;
+  }
+
+  &__submenu {
+    padding-top: 35px;
+    
+    li { border-bottom: 1px solid $color-submenu-underline; }
+
+    li:last-child { border: none; }
+
+    a {
+      color: $color-content;
+      font: $paragraph;
+      line-height: 36px;
+      text-decoration: none;
+
+      &:hover { color: $hover-blue; }
+    }
+  }
+}

@@ -1,0 +1,1 @@
+"use strict";$(function(){$(".slider-slick").slick({dots:!0,speed:0,slidesToScroll:1,autoplay:!0,autoplaySpeed:4e3}),$("#accordion").accordion({animate:100,collapsible:!0,heightStyle:"content"}),$(".features__expand__arrow").on("click",function(e){e.preventDefault(),$(e.target).parent().parent().find(".features__content").toggleClass("height-auto")})});

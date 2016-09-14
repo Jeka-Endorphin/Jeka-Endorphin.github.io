@@ -8,23 +8,29 @@ function Model(data) {
 	this.data = data;
 
 	this.addItem = function (item) {
-		if (item.length === 0) {
-			//проверка корректности на пустую строку
-			return;
-		}
+		if (item.length === 0) return; //проверка корректности на пустую строку
+
 		_this.data.push(item);
 
 		return _this.data;
 	};
 
 	this.removeItem = function (item) {
-		// debugger
 		var index = _this.data.indexOf(item);
 		_this.data.splice(index, 1);
 
-		if (index === -1) {
-			return;
-		}
+		if (index === -1) return;
+
+		return _this.data;
+	};
+
+	this.saveChangesItem = function (item) {
+		var index = _this.data.indexOf(item.defaultValue);
+		var changedValue = item.value;
+		_this.data[index] = changedValue;
+
+		if (index === -1) return;
+
 		return _this.data;
 	};
 }
@@ -34,7 +40,6 @@ function View(model) {
 	var _this2 = this;
 
 	var init = function init() {
-		// переписать на стрелочную ф-цию
 		var wrapper = _.template($('#wrapper-template').html());
 		$('body').prepend(wrapper);
 
@@ -58,7 +63,12 @@ function View(model) {
 // Controller
 function Controller(model, view) {
 	view.elements.addBtn.on('click', addItem);
+	view.elements.input.on('keypress', function (key) {
+		var enter = 13;
+		if (key.keyCode == enter) addItem();
+	});
 	view.elements.listContainer.on('click', '.item-delete', removeItem);
+	view.elements.listContainer.change(saveChangesItem);
 
 	function addItem() {
 		var newItem = view.elements.input.val();
@@ -72,10 +82,16 @@ function Controller(model, view) {
 		model.removeItem(item);
 		view.renderList(model.data);
 	}
+
+	function saveChangesItem(e) {
+		var item = e.target;
+		model.saveChangesItem(item);
+		view.renderList(model.data);
+	}
 }
 
 $(function () {
-	var firstToDolist = ['learn js', 'learn html', 'learn css', 'learn something'];
+	var firstToDolist = ['выучить что-то новое', 'купить девушке цветы', 'сходить на тренировку', 'купить подарок на ДР'];
 	var model = new Model(firstToDolist);
 	var view = new View(model);
 	var controller = new Controller(model, view);

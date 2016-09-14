@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <title>Welcome to my new project!</title>
+    <title>ToDo List</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1.0, width=device-width">
     <link type="text/css" rel="stylesheet" href="css/app.css" />
@@ -10,23 +10,28 @@
 </head>
 <body>
 
+
   <script type='text/template' id="wrapper-template">
     <div class="wrapper">
       <h1 class="page-title">ToDo List</h1>
       <ol class="item-list">
       </ol>
       <div class="controls">
-        <input type="text" class="item-value">
+        <input type="text" class="item-value" placeholder="write here">
         <button class="item-add"> Add</button>
       </div>
+      <footer>
+        <p class="auth">
+          made by Endorphin &#169
+        </p>
+      </footer>
     </div>
   </script>
 
   <script type='text/template' id="list-template">
     <% _(data).each(item => { %> 
       <div class='item-conteiner'>
-        <input type="textarea" value="<%= item %>" class='item-content' size='29'>
-        <!-- <li class='item-content'><%= item %> </li> -->
+        <input type="text" value="<%= item %>" class='item-content' size='29'>
         <span class="item-delete" data-value='<%= item %>'>&#215</span>
       </div>
     <% });%>

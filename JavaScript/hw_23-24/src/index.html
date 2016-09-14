@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Welcome to my new project!</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1.0, width=device-width">
+    <link type="text/css" rel="stylesheet" href="css/app.css" />
+    <script src='libs/libs.min.js'></script>
+    <script src='js/script.js'></script>
+</head>
+<body>
+
+  <script type='text/template' id="wrapper-template">
+    <div class="wrapper">
+      <h1 class="page-title">ToDo List</h1>
+      <ol class="item-list">
+      </ol>
+      <div class="controls">
+        <input type="text" class="item-value">
+        <button class="item-add"> Add</button>
+      </div>
+    </div>
+  </script>
+
+  <script type='text/template' id="list-template">
+    <% _(data).each(item => { %> 
+      <div class='item-conteiner'>
+        <input type="textarea" value="<%= item %>" class='item-content' size='29'>
+        <!-- <li class='item-content'><%= item %> </li> -->
+        <span class="item-delete" data-value='<%= item %>'>&#215</span>
+      </div>
+    <% });%>
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+// @import '../mobile';
+
+// 	&-sizer,
+// 	&__item {
+// 		width: 48%;
+// 		height: auto;
+// 	}
+
+@import '../desktop';
+
+	&-massonry {
+		width: 100%;
+		transition: width 1s;
+	}
+
+	&-sizer,
+	&__item {
+		width: 32%;
+	}

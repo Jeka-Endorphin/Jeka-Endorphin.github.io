@@ -1,0 +1,13 @@
+@import '../desktop';
+&__wrapper {
+	min-width: 748px;
+	width: 97%;
+	transition: width 1s;
+
+	&--partners{
+		width: 480px;
+		min-width: 480px;
+
+		transition: width 1s;
+	}
+}

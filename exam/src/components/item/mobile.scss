@@ -1,0 +1,12 @@
+& {
+  &s-title {
+    margin: 38px auto 16px;
+    @include header-text(22, $h_textColor);
+    text-align: center;
+  }
+
+  &__wrapper {
+    width: 301px;
+    margin: 0 auto 38px;
+  }
+}

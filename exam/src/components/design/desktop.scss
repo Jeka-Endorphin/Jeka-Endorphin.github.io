@@ -1,0 +1,16 @@
+@import 'mobile';
+& {
+  width: 110px;
+  padding: 0;
+  float: right;
+
+  &__name {
+    padding: 0 0 10px;
+    text-align: right;
+    letter-spacing: 1px;
+  }
+
+  &__logo {
+    cursor: pointer;
+  }
+}

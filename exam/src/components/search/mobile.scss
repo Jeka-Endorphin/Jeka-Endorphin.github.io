@@ -1,0 +1,19 @@
+& {
+  width: 100%;
+  height: auto;
+  padding-bottom: 40px;
+  
+  &__text {
+    @include paragraph-text($h_textColor);
+    font-size: 18px;
+    text-align: center;
+  }
+
+  &__input {
+    display: block;
+    width: 280px;
+    margin: 16px auto;
+    padding: 10px 16px 10px;
+    @include paragraph-text($h_textColor);
+  }
+}

@@ -1,0 +1,37 @@
+
+& {
+	
+	height: 540px;
+	width: 100%;
+	background: url( $img + 'promo-bg-small.png') center -10px no-repeat;
+	text-align: center;
+	transition: height 1s;
+
+	&__header {
+		padding-top: 20px;
+	}
+
+	&__title {
+		width: 281px;
+		height: 59px;
+		margin: 38px auto 0;
+		@include header-text(30, $white);
+		text-transform: uppercase;
+	}
+
+	&__text {
+		margin: 19px auto;
+		width: 217px;
+		height: 36px;
+		@include paragraph-text ($white);
+		font-size: 18px;
+		line-height: 21px;
+	}
+	
+	&__brand {
+		padding-top: 115px;
+		@include header-text(20, $white);
+		text-transform: uppercase;
+	}
+}
+

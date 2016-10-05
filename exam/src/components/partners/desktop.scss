@@ -1,0 +1,53 @@
+& {
+	padding-bottom: 2px;
+	width: 100%;
+
+	&__item {
+		width: 220px;
+		text-align: center;
+		
+		&--first {
+			.partners__icon { background: url( $img +'icon-TV.png') 0 0 no-repeat; }
+		}
+
+		&--second {
+			.partners__icon { background: url( $img +'icon-bottle.png') 0 0 no-repeat; }
+			order: 2;
+		}
+
+		&--third {
+			.partners__icon { background: url( $img +'icon-cup.png') 0 0 no-repeat; }
+			order: 1;
+		}
+
+		&--fourth {
+			.partners__icon { background: url( $img +'icon-plain.png') 0 0 no-repeat; }
+			order: 3;
+		}
+	}
+	
+	&__pic {
+		position: relative;
+	}
+
+	&__icon {
+		display: block;
+		position: absolute;
+		bottom: -2px;
+		right: 45px;
+		width: 41px;
+		height: 41px;
+	}
+
+	&__name {
+		@include header-text(14, $h_textColor);
+		padding: 16px 0 16px;
+	}
+
+	&__info {
+		@include paragraph-text($p_textColor_partners);
+		line-height: 16px;
+		letter-spacing: .2px;
+	}
+
+}

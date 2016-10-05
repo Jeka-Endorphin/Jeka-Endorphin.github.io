@@ -1,0 +1,50 @@
+& {
+  width: 100%;
+
+  &__item {
+    width: 220px;
+    margin: 0 auto 30px;
+    text-align: center;
+
+    &--first .partners__icon {
+      background: url( $img +'icon-TV.png') 0 0 no-repeat; }
+
+    &--second .partners__icon { 
+      background: url( $img +'icon-bottle.png') 0 0 no-repeat; }
+
+    &--third .partners__icon {
+      background: url( $img +'icon-cup.png') 0 0 no-repeat; }
+
+    &--fourth {
+      .partners__icon {
+        background: url( $img +'icon-plain.png') 0 0 no-repeat; 
+      }
+      margin-bottom: 0;
+    }
+  }
+  
+  &__pic {
+    position: relative;
+  }
+
+  &__icon {
+    display: block;
+    position: absolute;
+    bottom: -2px;
+    right: 45px;
+    width: 41px;
+    height: 41px;
+    background: url( $img +'icon-TV.png') 0 0 no-repeat;
+  }
+
+  &__name {
+    @include header-text(14, $h_textColor);
+    padding: 21px 0 16px;
+  }
+
+  &__info {
+    @include paragraph-text($p_textColor_partners);
+
+  }
+
+}

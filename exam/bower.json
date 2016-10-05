@@ -1,0 +1,24 @@
+{
+  "name": "bower",
+  "version": "1.0.0",
+  "homepage": "https://github.com/Jeka-Endorphin",
+  "authors": "Jeka Endorphin",
+  "description": "Just bower",
+  "moduleType": [
+    "globals"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.*",
+    "slick-carousel": "^1.6.0",
+    "masonry": "^4.1.1",
+    "imagesloaded": "^4.1.1"
+  }
+}

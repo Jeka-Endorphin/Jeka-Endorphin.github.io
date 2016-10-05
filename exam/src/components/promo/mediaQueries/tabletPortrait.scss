@@ -1,0 +1,7 @@
+@import '../desktop';
+
+&__header {
+	min-width: 670px;
+	width: 85%;
+	transition: width 1s;
+}

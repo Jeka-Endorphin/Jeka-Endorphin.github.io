@@ -1,0 +1,9 @@
+& {
+	width: 100%;
+	border-top: 4px solid $red;
+	padding-top: 16px;
+
+	&__brand {
+		@include header-text(16, $red);
+	}
+}

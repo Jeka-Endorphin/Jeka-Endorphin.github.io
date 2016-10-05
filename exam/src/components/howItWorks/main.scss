@@ -1,0 +1,8 @@
+/* ************
+How it works
+************* */
+.howItWorks {
+    @import '../../theme/mq';
+    @import '../../theme/functions';
+    @import 'mediaQueries/main';
+}

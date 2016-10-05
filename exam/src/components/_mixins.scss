@@ -1,0 +1,28 @@
+@mixin clearfix {
+	&::after {
+		content: '';
+		clear: both;
+		display: block;
+		height: 0;
+		visibility: hidden;
+	}
+}
+
+@mixin paragraph-text($color) {
+	font: {
+		family: Roboto, Helvetica, Arial;
+		size: 14px;
+		weight: 300;
+	}
+	color: $color;
+}
+
+@mixin header-text($size, $color) {
+	font: {
+		family: Montserrat, Helvetica, Arial;
+		size: $size+px;
+		weight: 600;
+	}
+	text-align: center;
+	color: $color;
+}

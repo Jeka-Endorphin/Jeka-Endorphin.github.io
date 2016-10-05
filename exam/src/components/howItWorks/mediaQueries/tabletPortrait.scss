@@ -1,0 +1,28 @@
+@import '../desktop';
+
+.slider {
+	min-width: 236px;
+	width: 31.9%;
+	transition: width .2s;
+
+	&__prev,
+	&__next {
+	    top: 55px;
+	    transition: top .8s;
+	    
+	}
+
+	&__prev {
+	    left: 10px;
+	    [dir="rtl"] & {
+	        right: 10px;
+	    }
+	}
+
+	&__next {
+	    right: 10px;
+	    [dir="rtl"] & {
+	        left: 10px;
+	    }
+	}
+}

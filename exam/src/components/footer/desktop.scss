@@ -1,0 +1,22 @@
+& {
+	text-align: center;
+	
+	.item__wrapper {
+		display: inline-block;
+	}
+
+	width: 100%;
+	border-top: 4px solid $red;
+	padding-top: 38px;
+
+	&__menu {
+		float: left;
+	}
+
+	&__brand {
+		float: left;
+		margin-left: -1px;
+		@include header-text(16, $red);
+	    letter-spacing: .8px;
+	}
+}

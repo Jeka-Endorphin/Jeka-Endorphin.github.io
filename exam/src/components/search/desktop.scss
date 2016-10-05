@@ -1,0 +1,39 @@
+& {
+  width: 100%;
+  height: auto;
+  padding-bottom: 98px;
+  
+  &__text {
+    margin-top: -1px;
+    padding-bottom: 24px;
+    @include paragraph-text($h_textColor);
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: .2px;
+  }
+
+  &__input {
+    display: inline-block;
+    width: 240px;
+    margin-top: 16px;
+    margin-right: 6px;
+    padding: 10px 16px 9px;
+    border-width: 1px;
+    border-radius: 4px;
+    @include paragraph-text($h_textColor);
+  }
+
+  &__form {
+    @include clearfix;
+    text-align: center;
+  }
+
+  &__btn {
+    display: inline-block;
+    width: auto;
+    margin-right: 2px;
+    margin-bottom: 2px;
+    padding: 8px 24px 8px 24px;
+    vertical-align: 1px;
+  }
+}

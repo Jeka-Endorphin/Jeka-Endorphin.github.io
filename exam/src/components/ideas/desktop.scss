@@ -1,0 +1,47 @@
+& {
+  &-massonry {
+    width: 940px;
+    margin: 0 auto 38px;
+    @include clearfix;
+  }
+
+  &-grid { }
+
+  &-sizer,
+  &__item {
+    width: 32.6%;
+  }
+
+  &__item {
+    position: relative;
+    background-size: 100%;
+    margin-bottom: 10px;
+    overflow: hidden;
+    float: left;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  &__img {
+    display: block;
+      max-width: 100%;
+      border-right: 5px;
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    background: rgba(0,0,0,.3) 100% 100%;
+  }
+
+  &__title {
+    position: relative;
+    top: 50%;
+    @include header-text(22, $white);
+  }
+
+}

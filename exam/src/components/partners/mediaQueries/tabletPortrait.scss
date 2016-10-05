@@ -1,0 +1,8 @@
+@import '../desktop';
+
+&__item {
+	&--first,
+	&--third {
+		padding-bottom: 55px;
+	}
+}

@@ -1,0 +1,55 @@
+& {
+  height: 700px;
+  width: 100%;
+  background: url( $img + 'promo-bg.png') center top no-repeat;
+  text-align: center;
+  background-size: auto 100%;
+  transition: height 1s;
+
+  &__header {
+    width: 940px;
+    padding-top: 38px;
+    margin: 0 auto;
+    text-align: center;
+    @include clearfix;
+    transition: width 1s;
+  }
+
+  &__title {
+    width: auto;
+    height: auto;
+    padding-top: 103px;
+    padding-right: 3px;
+    margin: 38px auto 0;
+    @include header-text(52, $white);
+    text-transform: uppercase;
+    line-height: 62px;
+    letter-spacing: -.4px;
+    transition: font-size .7s;
+
+    span {
+      display: block;
+      letter-spacing: 0;    
+    }
+  }
+
+  &__text {
+    width: auto;
+    margin: 28px auto 35px; 
+    @include paragraph-text ($white);
+    font-size: 24px;
+    letter-spacing: .3px;
+    font-weight: 300;
+    transition: font-size .7s;
+  }
+  
+  &__brand {
+    float: left;
+    margin-left: -1px;
+    padding-top: 10px;
+    @include header-text(20, $white);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+}
+

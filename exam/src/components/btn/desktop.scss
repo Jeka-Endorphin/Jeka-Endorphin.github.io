@@ -1,0 +1,21 @@
+@import 'mobile';
+
+& {
+  width: 225px;
+
+  &--howItWorks {
+    width: 70px;
+    padding-left: 2px;
+    margin-bottom: 0;
+    letter-spacing: 2px;
+  }
+
+  &--partners {
+    width: auto;
+      margin-top: 39px;
+    padding: {
+      right: 30px;
+      left: 26px;
+    } 
+  }
+}

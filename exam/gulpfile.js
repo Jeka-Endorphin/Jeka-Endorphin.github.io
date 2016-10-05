@@ -3,7 +3,7 @@ const gulp          = require('gulp'),
       sass          = require('gulp-ruby-sass'),
       autoPrefixer  = require('gulp-autoprefixer'),
       cleanCSS      = require('gulp-clean-css'),
-      uglify        = require('gulp-uglify'),
+      // uglify        = require('gulp-uglify'),
       rename        = require('gulp-rename'),
       sourceMaps    = require('gulp-sourcemaps'),
       server        = require('gulp-server-livereload'),
@@ -33,9 +33,9 @@ gulp.task('fonts', function(){
 });
 
 gulp.task('images', function(){
-  return gulp.src('src/theme/images/**/*')
+  return gulp.src('src/theme/img/**/*')
     .pipe(imageMin())
-    .pipe(gulp.dest('dist/images/'))
+    .pipe(gulp.dest('dist/img/'))
 });
 
 gulp.task('js', function() {
@@ -54,11 +54,14 @@ gulp.task('json', function() {
 gulp.task('scripts', function() {
 return gulp.src([ 
     'src/theme/libs/jquery/dist/jquery.min.js',
-    'src/theme/libs/lodash/dist/lodash.min.js',
+    // 'src/theme/libs/lodash/dist/lodash.min.js',
+    'src/theme/libs/tmplResig.js',
     'src/theme/libs/slick-carousel/slick/slick.min.js',
+    'src/theme/libs/imagesloaded/imagesloaded.pkgd.min.js',
+    'src/theme/libs/masonry/dist/masonry.pkgd.min.js'
   ])
   .pipe(concat('libs.min.js')) 
-  .pipe(uglify())
+  // .pipe(uglify())
   .pipe(gulp.dest('dist/libs'));
 });
 

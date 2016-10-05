@@ -1,0 +1,45 @@
+& {
+
+  &__list {
+    margin-left: 100px;
+    transition: margin 1s;
+  }
+
+  &__item { 
+    display: inline-block;
+    padding-right: 88px;
+    vertical-align: top;
+  }
+
+  &__link {
+    @include header-text(14, $h_textColor);
+    text-decoration: none;
+
+    &:hover {
+      border-bottom: 1px solid $h_textColor;
+    }
+  }
+
+  &--submenu {
+    padding-top: 9px;
+
+    .menu__item {
+      display: block;
+      padding: 0 11px 0 0;
+
+      &--last {
+        padding: 0;
+      }
+    }
+
+    .menu__link {
+      @include paragraph-text($p_textColor_partners);
+      line-height: 24px;
+      text-decoration: none;
+
+      &:hover {
+        border-bottom: 1px solid $p_textColor_partners;
+      }
+    }
+  }
+}

@@ -11,15 +11,30 @@ const gulp          = require('gulp'),
       cache         = require('gulp-cache'),
       babel         = require('gulp-babel');  
 
+var AUTOPREFIXER_BROWSERS = [
+  'ie >= 8',
+  'ie_mob >= 10',
+  'ff >= 15',
+  'chrome >= 25',
+  'safari >= 7',
+  'opera >= 23',
+  'ios >= 7',
+  'android >= 4.4',
+  'bb >= 10'
+];
+
 gulp.task('sass', function() {
-  return sass('src/components/main.scss', { sourcemap: true, style: 'compact' })
-    .on('error', sass.logError)
-    .pipe(sourceMaps.init({loadMaps: true}))
-      .pipe(autoPrefixer('last 5 versions', 'safari 5', 'ie > 7', 'opera 12.1'))
-      .pipe(rename('app.css'))
-      // .pipe(cleanCSS())
-    .pipe(sourceMaps.write())
-    .pipe(gulp.dest('dist/css'));
+    return sass('src/components/main.scss', { sourcemap: true, style: 'compact' })
+        .on('error', sass.logError)
+        .pipe(sourceMaps.init({loadMaps: true}))
+        .pipe(autoPrefixer({
+            browsers: AUTOPREFIXER_BROWSERS,
+            cascade: false
+        }))
+        .pipe(rename('app.css'))
+        .pipe(cleanCSS())
+        .pipe(sourceMaps.write())
+        .pipe(gulp.dest('dist/css'));
 });
 
 gulp.task('pages', function(){

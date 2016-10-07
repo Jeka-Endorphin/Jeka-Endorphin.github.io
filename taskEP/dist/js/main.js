@@ -20,4 +20,10 @@ $(function () {
   $('.address-edit').on('click', function () {
     $('.address-form').toggle('true');
   });
+
+  // expand activiyies
+  $('.activities-expand').on('click', function () {
+    $('.activities-collapse').toggle();
+    // $('.activities-collapse').toggleClass('.activities-collapse--expand');
+  });
 });

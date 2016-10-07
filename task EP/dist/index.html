@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>URLAUBSGLÜCK</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="initial-scale=1.0, width=device-width">
+  <meta name="author" content="Endorphin">
+  <meta name="description" content="work example">
+  <link type="text/css" rel="stylesheet" href="css/app.css" />
+</head>
+<body>
+
+  <!-- *****
+  Header 
+  ******* -->
+  <header class="header">
+    <div class="logo">
+      <span class="logo-notification sprite sprite-icon-notification">1</span>
+    </div>
+
+    <ul class="services">
+      <li>
+        <a href="#">денежные переводы</a>
+      </li>
+      <li>
+        <a href="#">оплата услуг</a>
+      </li>
+    </ul>
+    
+    <div class="account account--hidden">
+      <!-- Authorization -->
+      <div class="auth">
+        <div class="auth-enter">Войти</div>
+        <div class="auth-registration">Зарегистрироваться</div>
+      </div>
+      
+      <!-- User Account -->
+      <div class="account__inner-wrapper">
+        <span class="account__arrow"></span>
+        <div class="account__user-name">Константинов Константин</div>
+        <div class="account__state">
+          <div class="account__state-bar">
+          </div>
+          <div class="account__state-info">Заполненность профиля 78%</div>
+          <div class="account-edit">
+            <a href="#">Редактироватиь</a>
+          </div>
+        </div>
+        <div class="account__address">
+          Анны Ахматовой 1, кв 1
+          <br>
+          Киев,
+          <span>Украина</span>
+          <div class="account__address-edit"><a href="#">Другой адресс</a></div>
+        </div>
+        <div class="account__notification">
+          <a href="#">Уведомления</a>
+          <span>1</span>
+        </div>
+        <div class="account__lang"><a href="#">Русский</a></div>
+        <div class="account__exit"><a href="#">Выйти</a></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ***
+  Cards 
+  ***** -->
+  <section class="cards">
+    <div class="promotion">
+      <p>
+        рекламный блок
+        <br>Платите без комиссии!</p>
+        <p><a href="#">Заказать</a></p>
+      </div>
+      <div class="wrapper">
+
+        <ul class="cards-list">
+          <li class="cards-item sprite sprite-card-1"></li>
+          <li class="cards-item sprite sprite-card-2"></li>
+          <li class="cards-add-item">
+            <a href="#">
+              <span>+</span><br>добавить
+            </a>
+          </li>
+        </ul>
+
+      </div>  
+    </section>
+
+    <div class="wrapper">
+    <!-- ****
+    MAIN 
+    ***** -->
+    <main>
+      <!-- Profile -->
+      <div class="profile">
+        <h2>Профиль</h2>
+        <form action="#" method="POST">
+          <label for="user-name">
+            <p>Как нам к вам обращаться?</p>
+            <input type="text" id="user-name" placeholder="Имя Фамилия"  required></label>
+          <label for="user-phone">
+            <p>Номер телефона или email</p>
+            <input type="tel" id="user-phone" placeholder="+380 98 765 43 21" required >
+          </label>
+          <label for="user-email">
+            <p>E-mail</p>
+            <input type="email" id="user-email" placeholder="login@example.com" required></label>
+          <div class="profile__checkboxes">
+              <p>Получать информацию на email:</p>
+              <p>
+                <input type="checkbox" class="custom-checkbox" name="check" id="receipt" value="receipt">
+                <label for="receipt">мои платежи (квитанции)</label>
+              </p>
+              <p>
+                <input type="checkbox" class="custom-checkbox" name="check" id="offers" value="offers">
+                <label for="offers">выгодные предложения EasyPay</label>
+              </p>
+          </div>
+          <button class="btn">Сохранить изменения</button>
+        </form>
+      </div>
+
+      <!-- Limits -->
+      <div class="limits">
+        <h2>Лимиты</h2>
+        <p>
+          Проведение платежей свыше установленных лимитов возможн Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque ut porro incidunt natus qui, perferendis tempora ab neque, cupiditate, ex mollitia eveniet nam
+        </p>
+
+        <form action="#" name="limits-form" method="POST">
+          <label for="limits-sum">
+            <p>Лимит на сумму платежа</p>
+            <p>
+              <input type="number" id="limits-sum" name="limits-sum" placeholder="100.00" required></p>
+          </label>
+          <label for="limits-daily">
+            <p>Суточный лимит</p>
+            <p>
+              <input type="number" id="limits-daily" name="limits-daily" placeholder="1000.00" required></p>
+          </label>
+          <input class="btn" type="submit" class="submit" name="limits-submit" id="limits-submit" value="Применить">
+        </form>
+        <p>
+          Вам будет отправлено смс-сообщение с кодом подтверждения текущих настроек
+        </p>
+      </div>
+
+    <!-- Password -->
+      <div class="password">
+        <h2>Изменить пароль</h2>
+        <form action="#" name="password-form" method="POST">
+          <p>Текущий пароль</p>
+          <p>
+            <input type="password" id="password-current" placeholder="Текущий пароль"  required></p>
+          <p>
+            <input type="password" id="password-new" placeholder="Новый пароль" required></p>
+          <p>
+            <input type="password" id="password-new-assept" placeholder="Повторный ввод нового пароля" required></p>
+          <p>
+            <input class="btn" type="submit" class="submit" name="password-submit" id="password-submit" value="Применить"></p>
+        </form>
+      </div>
+
+      <!-- Delete Account -->
+      <div class="delete">
+        <h2>Удаление</h2>
+        <p>Вы можете удалить личный кабинет в системе EasyPay.</p>
+        <p>Перед удалением личного кабинета, убедитесь в том, что:</p>
+        <p>баланс всех электронных кошельков равен нулю,<br>платежные карты, шаблоны платежей и регулярные платежи удалены.<br>Внимание! При удалении личного кабинета, вся сумма накопленных Вами баллов по программе лояльности EasyPay будет аннулирована. Сохраненные платежные карты, регулярные платежи и шаблоны платежей навсегда будут удалены из системы!
+        </p>
+        <p>
+          Для продолжения удаления личного кабинета, нажмите кнопку "Удалить личный кабинет". На Ваш мобильный телефон придет смс-сообщение с кодом подтверждения. Введите код во всплывающем окне и нажмите кнопку "Подтвердить".
+        </p>
+
+        <p>Далеко-далеко за словесными горами в стране, гласных и согласных.</p>
+
+        <div class="delete-account">
+          <a href="#">Удалить личный кабинет</a>
+        </div>
+      </div>
+    </main>    
+
+    <!-- ******
+    Right Column 
+    ******** -->
+    <section class="right-column">
+
+      <!-- Address -->
+      <article class="address clearfix">
+        <div class="address-main">
+          <h2>Мои адреса</h2>
+          <ul class="address-list">
+            <li class="address-item">
+              Анны Ахматовой 1, кв 1
+              <p class="address-item__city">Киев,
+                <span class="address-item__country">Украина</span>
+              </p>
+            </li>
+            <div class="address-edit"><a href="#">Редактировать</a></div>
+          </ul>
+        </div>
+
+        <div class="address-form">
+          <form action="#" method="POST" name="address-form">
+
+            <label>
+              <p>Город</p>
+              <p>
+                <input type="text" id="sity" placeholder="Запрожье" required></p>
+              </label>
+              <label>
+                <p>Улица</p>
+                <p>
+                  <input type="text" id="street" placeholder="Саксаганская" required></p>
+                </label>
+                <div class="address-form__house">
+                  <div>
+                    <label for="building-num">
+                      <p>Дом</p>
+                      <p>
+                        <input type="text" id="building-num" placeholder="158-в" required>
+                      </p>
+                    </label>
+                  </div>
+                  <div>
+                    <input type="text" id="building-part" placeholder="Корпус">
+                  </div>
+                  <div>
+                    <label for="flat">
+                      <p>Квартира</p>
+                      <p>
+                        <input type="text" id="flat" placeholder="12">
+                      </p>
+                    </label>
+                  </div>
+                    
+                </div>
+                <div class="address-controls">
+                  <div class="address-controls__submit">
+                    <input type="reset" value="Отмена">
+                  </div>
+                  <div class="address-controls__submit">
+                    <input type="submit" value="Добавить">
+                  </div>
+                </div>
+            </form>
+          </div>
+        </article>
+
+        <!-- Activities -->
+<!--         <aside class="activities">
+          <section></section>
+        </aside> -->
+      </section> <!-- end of Right Column  -->
+    </div>
+
+
+  <!-- *****
+   Footer 
+   ***** -->
+   <footer>
+    <ul class="socials">
+      <li>
+        <a class="sprite sprite-socials-fb" href="https://www.facebook.com/" target="_blank"></a>
+      </li>
+      <li>
+        <a class="sprite sprite-socials-google" href="https://plus.google.com/" target="_blank"></a>
+      </li>
+      <li>
+        <a class="sprite sprite-socials-vk" href="https://vk.com/" target="_blank"></a>
+      </li>
+      <li>
+        <a class="sprite sprite-socials-twitter" href="https://twitter.com/" target="_blank"></a>
+      </li>
+
+    </ul>
+    <div class="footer-right">
+      <p class="footer-language">Русский</p>
+      <nav class="menu">
+        <li>
+          <a href="#">О компании</a>
+        </li>
+        <li>
+          <a href="#">Новости</a>
+        </li>
+        <li>
+          <a href="#">Поддержка</a>
+        </li>
+        <li>
+          <a href="#">Задать вопрос</a>
+        </li>
+        <li>
+          <a href="#">Справочные материалы</a>
+        </li>
+      </nav>
+      <p class="copyright">Copyright &#169 2009-2016 EasyPay.</p>
+    </div>
+  </footer>
+  
+  <!-- Scripts -->
+  <script src='libs/libs.min.js'></script>
+  <script src='js/main.js'></script>
+</body>
+</html>

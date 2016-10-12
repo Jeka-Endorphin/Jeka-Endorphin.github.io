@@ -5,7 +5,7 @@ $(function () {
   // show account
   $('.auth').one('click', function () {
     $(this).animate({
-      opacity: 0 }, 500, function () {
+      opacity: 0 }, 400, function () {
       $(this).hide();
     });
     $('.account').removeClass('account--hidden');
@@ -18,12 +18,17 @@ $(function () {
 
   // address edit
   $('.address-edit').on('click', function () {
-    $('.address-form').toggle('true');
+    $('.address-form').toggle(400);
   });
 
   // expand activiyies
-  $('.activities-expand').on('click', function () {
-    $('.activities-collapse').toggle();
-    // $('.activities-collapse').toggleClass('.activities-collapse--expand');
+  var counter = null;
+  $('.activities-expand').on('click', function (event) {
+    event.preventDefault();
+    $('.activities-collapse').toggle(400);
+
+    counter = counter ? 0 : 1;
+
+    counter ? $(this).html('Свернуть') : $(this).html('Показать еще');
   });
 });

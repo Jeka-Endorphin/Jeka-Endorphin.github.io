@@ -1,0 +1,162 @@
+h2,
+p,
+div,
+form,
+selection,
+a { color: $main; }
+
+h2 {
+  padding: 35px 0 20px;
+  font: 400 24px / 28px $font;
+}
+
+.btn {
+  @extend .auth-registration;
+  width: auto;
+  height: 48px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 70.5%;
+
+  @include media (mobile) {
+    width: 100%;
+    padding: 0 5px; }
+  @include media (tablet) { width: 60%; }
+
+  form { 
+    width: 340px;
+
+    @include media (mobile) {
+      width: 100%;
+      margin: 0 auto;}
+    @include media (tablet) {
+      width: 100%; 
+      max-width: 340px; }
+  }
+
+  label {
+    font-size: 14px;
+    font-weight: 300;  }
+
+  p {
+    padding: 7px 0;
+    line-height: 18px;  }
+}
+
+input:not([type="submit"]) {
+  width: 100%;
+  height: 45px;
+  padding: 0 14px;
+  font-size: 16px;
+}
+
+  @include media (mobile) {
+    .submit {
+      text-align: center;
+      cursor: pointer;
+
+      input { padding: 0 40px;}
+    }
+  }
+
+  @include media (tablet) {
+    .submit input { padding: 0 40px;}
+  }
+
+.custom-checkbox {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+
+  &:checked + label:before {
+   background-position: -5px -80px;
+  }
+}
+
+.profile {
+  position: relative;
+
+  input[type="checkbox" i] {
+    outline: 1px solid $warn;
+    border: none;
+    border-radius: 0;
+    background-color: $warn;
+  }
+
+  &__checkboxes {
+    padding-top: 12px;
+
+    label:before {
+      content: " ";
+      display: inline-block;
+      top: 0;
+      left: 0;
+      width: 12px;
+      height: 12px;
+      margin-right: 8px;
+      margin-left: 13px;
+      background: url(../img/spritesheet.png);
+      background-position: -5px -93px;
+      position: relative;
+    }
+
+    p {padding-top: 15px;}
+  }
+
+  button {
+    @include media (mobile) {
+      display: block;
+      position: static;
+      margin: 20px auto;
+      padding: 0 40px; }
+
+    @include media (tablet) {
+      position: relative;
+      bottom: 0;
+      left: 0;
+      margin: 20px auto;
+      text-align: center; }
+
+    @include media (laptop) {
+      position: absolute;
+      top: 30px;
+      right: 0;
+      left: auto;
+      transition: right, top 1s;}
+
+    @include media (desktop) {
+      position: absolute;
+      top: 30px;
+      right: 0;
+      left: auto;
+      padding: 0 40px;
+      transition: right, top 1s; }
+  }
+}
+
+.limits {
+  @include media (tablet) { padding-right: 10px; }
+
+  p + p { padding-top: 0; }
+
+  .btn { margin: 10px 0 15px 0 ; }
+}
+
+.password p:first-child { padding-bottom: 0; }
+
+.delete-account {
+  margin-top: 17px;
+  
+  a { 
+    color: $warn; 
+    &:hover { color: $danger; }
+  }
+}
+
+

@@ -1,0 +1,71 @@
+@import '_variables';
+@import '../theme/reset';
+@import '../theme/fonts';
+@import '../theme/mq';
+@import '_mixins';
+
+
+.wrapper { 
+  display: flex;
+  justify-content: space-between;
+  max-width: $wrap-width-desctop;
+  // min-width: 900px;
+  margin: 0 auto;
+  padding-left: 5px;
+
+  @include media (mobile) {
+    flex-flow: column;
+    min-width: auto;
+    width: auto;
+  }
+  @include media (tablet) {
+    justify-content: center;
+    min-width: auto;
+    width: auto;
+  }
+  @include media (laptop) {
+    min-width: auto;
+    width: auto;
+  }
+}
+
+.clearfix::after {
+  content: '';
+  clear: both;
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+
+a {
+  font-family: $font;
+  text-decoration: none;
+}
+
+@import '_sprite';
+@import 'parts/header';
+@import 'parts/cards';
+@import 'parts/main';
+@import 'parts/right-column';
+@import 'parts/footer';
+
+
+// body::after {
+//   background: red;
+//   color: #fff;
+//   content: "undefined";
+//   right: 0;
+//   opacity: 0.8;
+//   padding: 0.5em 1em;
+//   position: fixed;
+//   text-align: center;
+//   bottom: 0;
+//   z-index: 99;
+
+//   @include media (mobile) { background: orange; content: "mobile"; }
+//   @include media (phoneLandscape) { background: darken(orange, 15%); content: "phoneLandscape"; }
+//   @include media (tablet) { background: green; content: "tablet"; }
+//   @include media (laptop) { background: red; content: "laptop"; }
+//   @include media (desktop) { background: violet; content: "desktop"; }
+//   @include media (desktopWide) { background: lightblue; content: "desktopWide"; }
+// }

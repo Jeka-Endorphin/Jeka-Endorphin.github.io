@@ -1,0 +1,307 @@
+/* ********* 
+Header 
+********** */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 58px;
+  border-bottom: 1px solid $grey-border;
+  overflow: visible;
+
+  @include media (mobile) {
+    height: auto; 
+    flex-flow: column; }
+}
+
+.logo {
+  background-size: cover;
+
+  img {width: 100%;}
+  
+  &-conteiner {
+    position: relative;
+    width: 95px;
+    min-width: 95px;
+    height: 37px;
+    margin-right: 30px;
+    transition: margin 1s;
+    
+    @include media (mobile) {
+      width: 50%;
+      height: auto;
+      margin: 15px auto; }
+    @include media (desktop) { margin: 0 30px 0 75px; }
+  }
+  
+  &-notification {
+    position: absolute;
+    top: 0;
+    right: -26px;
+    color: $white;
+    font: 300 11px / 17px $font;
+    text-align: center; }
+}
+
+.services {
+  margin: 0 5px;
+  text-align: center;
+ 
+  @include media (mobile) { margin: 15px auto; }
+
+  li { display: inline-block; }
+  li + li { 
+    margin-left: 1%; 
+    
+    @include media (laptop) { margin-left: 20px; }
+    @include media (desktop) { margin-left: 40px; }
+  }
+
+  a {
+    font: 400 15px $font;
+    color: $header_text;
+    line-height: 22px;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    &:hover {
+      color: $warn;
+    }
+  }
+}
+
+/* Authorization */
+.auth {
+  position: relative;
+  top: -24px;
+  display: flex;
+  right: 0;
+  align-items: center;
+  cursor: pointer;
+  transition: right 1s;
+
+  @include media (mobile) { justify-content: center; }
+  @include media (tablet) { right: 5px; }
+  @include media (laptop) { right: 15px; }
+  @include media (desktop) { right: 25px; }
+
+  &-enter,
+  &-registration {
+    height: 40px;
+    font: 15px / 40px $font;
+  }
+
+  &-enter {
+    margin-left: 10px;
+    margin-right: 5px;
+    color: $header_text;
+    font-weight: 700;
+
+    @include media (laptop) {  margin-right: 10px; }
+    @include media (desktop) { margin-right: 20px; }
+
+    &:hover { color: lighten($header_text, 30%); }
+  }
+
+  &-registration {
+    padding: 0 10px;
+    background-color: $warn;
+    font-weight: 500;
+    color: $white;
+    
+    @include media (laptop) { padding: 0 28px; }
+    @include media (desktop) { padding: 0 28px; }
+
+    &:hover { background-color: lighten($warn, 10%); }
+  }
+}
+
+/* Account */
+
+.account {
+  position: relative;
+  align-self: flex-start;
+  top: 0;
+  right: 0px;
+  min-width: 245px;
+  width: 247px;
+  transition: transform 1.2s, right 1s;
+
+  @include media (mobile) { width: 100%; }
+  @include media (tablet) { 
+    right: 5px; 
+    min-width: 225px; }
+  @include media (laptop) { right: 10px; }
+  @include media (desktop) { right: 36px; }
+  
+  &--hidden {
+    transform: translateY(32px);
+
+    @include media (mobile) {
+      > .account__inner-wrapper {
+        visibility: hidden;
+        height: 0;
+        margin: 0;}
+        transition: height .8s;
+      }
+  }
+   
+  &__inner-wrapper {
+    position: relative;
+    height: 59px;
+    // margin-bottom: 15px;
+    padding: 10px 5px 10px 70px;
+    border: 1px solid transparent;
+    background-color: $grey-bg;
+    font-size: 14px;
+    text-align: left;
+    overflow: hidden;
+    transition: background-color .4s, height 1s, margin 1s;
+    z-index: 5;
+
+    @include media (mobile) { height: 60px; }
+    @include media (tablet) { padding-left: 55px; }
+    
+    &--expanded {
+      height: auto;
+      background-color: $white;
+      border: 1px solid $grey-border;
+      transition: background-color 1s;
+
+      .account__arrow {
+        transform: rotate(720deg);
+        transition: transform 1s; }
+    }
+  }
+
+  &__arrow {
+    @include icon;
+    top: 25px;
+    right: 9px;
+    width: 8px;
+    height: 10px;
+    background-image: url(../img/spritesheet.png);
+    background-position: -4px -4px;
+    cursor: pointer;
+    transform: rotate(180deg);
+    transition: transform 1s;
+  
+    &:activ { background-color: #fff; }
+  }
+
+  &__user-name {
+    font: 500 15px $font;
+    cursor: pointer;
+
+    &:before {
+      @include icon;
+      top: 5px;
+      left: 15px;
+      width: 40px;
+      height: 40px;
+      background-image: url(../img/spritesheet.png);
+      background-position: -117px -206px;
+      z-index: 4;
+      
+      @include media (tablet) { left: 10px;}
+    }
+  }
+
+  &__state {
+    width: 100%;
+    font-size: 12px;
+
+    &-bar {
+      height: 17px;
+      background: url( $img + 'download.png');
+      background-position: -14px 0;
+      background-size: cover;
+      
+      @include media (mobile) {max-width: 200px;}
+    }
+  }
+  
+  &-edit a {
+    display: block;
+    padding-top: 4px;
+    color: $warn;
+  }
+
+  &__address {
+    position: relative;
+    padding-top: 20px;
+
+    span {
+      color: $light-grey-text;
+      font-weight: 300;
+      font-size: 12px;
+    }
+
+    &-edit a {    
+      display: block;
+      padding-top: 4px;
+      font-size: 12px;
+      color: $warn;
+      line-height: 16px;
+    }
+
+    &::after {
+      @include icon;
+      top: 19px;
+      left: -45px;
+      background-position: 0 0;
+
+      @include media (tablet) { left: -40px;}
+    }
+  }
+
+  &__notification {
+    position: relative;
+    padding-top: 20px;
+    span {
+      position: absolute;
+      right: 10px;
+      color: $warn;
+    }
+
+    &::after {
+      @include icon;
+      top: 19px;
+      left: -45px;
+      height: 17px;
+      background-position: 0 -20px;
+      
+      @include media (tablet) { left: -40px;}
+    }
+  }
+
+  &__lang,
+  &__exit {
+    position: relative;
+    padding-top: 20px;
+  }
+
+  &__lang::after {
+    @include icon;
+    top: 19px;
+    left: -45px;
+    height: 17px;
+    background-position: 0 -37px;
+    
+    @include media (tablet) { left: -40px;}
+  }
+
+  &__exit::after {
+    @include icon;
+    top: 19px;
+    left: -43px;
+    height: 17px;
+    background-position: 0 -54px;
+
+    @include media (tablet) { left: -40px;}
+  }
+}
+

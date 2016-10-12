@@ -1,0 +1,30 @@
+@mixin icon {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-image: url(../img/icons.png);
+    background-repeat: no-repeat;
+};
+
+@mixin media ($media) {
+  @if $media == mobile {
+    @media only screen and (max-width: $mobile) { @content; }
+  }
+  // @else if $media == phoneLandscape {
+  //   @media only screen and (min-width: $mobile + 1) and (max-width: $phoneLandscape) { @content; }
+  // }
+  @else if $media == tablet {
+    @media only screen and (min-width: $mobile + 1) and (max-width: $tablet) { @content; }
+  }
+  @else if $media == laptop {
+    @media only screen and (min-width: $tablet + 1) and (max-width: $laptop) { @content; }
+  }
+  @else if $media == desktop {
+    @media only screen and (min-width: $desktop) { @content; }
+  }
+  @else if $media == desktopWide {
+    @media only screen and (min-width: $desktopWide) { @content; }
+  }
+}

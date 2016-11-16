@@ -169,13 +169,13 @@ App = (function () {
       };
 
       for (i = 1; i <= j; i +=1 ) {
-          let row = tbody.insertRow(),
-              iLeng = data[i].length,
-              cell, k;
-          for(k = 0; k < iLeng; k += 1){
-            cell = row.insertCell(-1);
-            cell.innerText = data[i][k];
-          };
+        let row = tbody.insertRow(),
+            iLeng = data[i].length,
+            cell, k;
+        for(k = 0; k < iLeng; k += 1){
+          cell = row.insertCell(-1);
+          cell.innerText = data[i][k];
+        };
       };
 
       tbody.addEventListener('click', (ev) => {

@@ -157,7 +157,9 @@ App = (function () {
     },
 
     renderTBody: function (data) {
-      let tbody, i;
+      let tbody,
+          i,
+          j = data.length - 1;
 
       if (this.table.tBodies[0]) {
         tbody = this.table.tBodies[0];
@@ -166,7 +168,7 @@ App = (function () {
         tbody = this.table.createTBody();
       };
 
-      for (i = 1, j = data.length - 1; i <= j; i +=1 ) {
+      for (i = 1; i <= j; i +=1 ) {
           let row = tbody.insertRow(),
               iLeng = data[i].length,
               cell, k;

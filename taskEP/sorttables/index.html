@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Welcome to my Tables Generator Project!</title>
+	<link type="text/css" rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+		
+	<div id="wrapper">
+		<section id='additional'>
+			<h2>Выберите набор данных</h2>
+			<ul>
+				<li>
+					<button class="btn_small">SMALL</button>
+					<ul>
+						<li>Имя</li>
+						<li>Фамилия</li>
+						<li>Должность</li>
+					</ul>
+				</li>
+				<li>
+					<button class="btn_big">BIG</button>
+					<ul>
+						<li>ID</li>
+						<li>Имя</li>
+						<li>Фамилия</li>
+						<li>Пол</li>
+						<li>Компания</li>
+						<li>Должность</li>
+					</ul>
+				</li>
+				<li>
+					<form action="#">
+						<button class="btn_custon">CUSTOM</button>
+						<ul>
+							<li><label><input type="checkbox" placeholder='id'  name="customTable" value="ID">ID</label></li>
+							<li><label><input type="checkbox" placeholder='firstName' name="customTable" value="Имя">Имя</label></li>
+							<li><label><input type="checkbox" placeholder='lastName' name="customTable" value="Фамилия">Фамилия</label></li>
+							<li><label><input type="checkbox" placeholder='gender' name="customTable" value="Пол">Пол</label></li>
+							<li><label><input type="checkbox" placeholder='company' name="customTable" value="Компания">Компания</label></li>
+							<li><label><input type="checkbox" placeholder='job' name="customTable" value="Должность">Должность</label></li>
+						</ul>
+					</form>
+				</li>
+			</ul>
+		</section>
+		<p><button id="btn_add" class="hide">+ Добавить таблицу</button></p>
+	</div>
+
+	<script>
+			// function saveToLocalStorage() {
+			  var xhr = new XMLHttpRequest();
+			  xhr.open('GET', '/js/db.json', true);
+			  xhr.onreadystatechange = function() {
+			    if (xhr.readyState != 4) return;
+
+			    if (xhr.status != 200) {
+			      // обработать ошибку
+			      alert('Ошибка ' + xhr.status + ': ' + xhr.statusText);
+			      return;
+			    };
+			    
+			    localStorage.setItem("database", xhr.responseText);
+			    console.log(`success: data was moved to localStorage
+			     key: "database"`);
+			  }
+			  xhr.send(null);
+			// }
+	</script>
+	<script src='js/App.js'></script>
+</body>
+</html>

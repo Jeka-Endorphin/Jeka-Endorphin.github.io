@@ -6,7 +6,7 @@ App = (function () {
 
   Constr = function () {
     
-      this.dataBigHash = {"id":"ID","firstName":"Имя","lastName":"Фамилия","gender":"Пол","company":"Компания","job":"Должность"};
+    this.dataBigHash = {"id":"ID","firstName":"Имя","lastName":"Фамилия","gender":"Пол","company":"Компания","job":"Должность"};
     this.dataSmallHash = {"firstName":"Имя","lastName":"Фамилия","job":"Должность"};
     this.dataCustomHash = {};
     this.isFiltered = false;
